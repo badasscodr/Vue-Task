@@ -1,0 +1,50 @@
+@import '../../colors.scss';
+
+.settings-wrapper {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+
+    .v-tabs {
+        &.method-tabs {
+            border-bottom: 2px solid $table-border !important;
+            border-top-left-radius: 4px !important;
+            border-top-right-radius: 4px !important;
+
+            .v-slide-group__wrapper {
+                .v-tab {
+                    font-size: 14px !important;
+                    padding: 14px 20px;
+                    text-transform: capitalize !important;
+                    letter-spacing: 0;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    color: $default-text-color !important;
+
+                    &.v-tab--active {
+                        color: $dark-blue !important;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .settings-wrapper {
+        padding: 10px 0 0;
+
+        .v-tabs {
+            &.method-tabs {
+                .v-slide-group__prev {
+                    display: none !important;
+                }
+
+                .v-slide-group__wrapper {
+                    .v-tab {
+                        padding: 14px 18px;                    
+                    }
+                }
+            }
+        }
+    }
+}

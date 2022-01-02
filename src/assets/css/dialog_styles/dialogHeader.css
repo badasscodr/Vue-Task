@@ -1,0 +1,37 @@
+.v-dialog .v-card .v-card__title {
+	/* height: 66px; */
+	border-bottom: 2px solid #E1ECF0;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 16px 24px !important;
+    margin-bottom: 0 !important;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    background-color: #fff;
+}
+
+.v-dialog .v-card .v-card__title .headline {
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'Inter-SemiBold', sans-serif !important;
+    color: #4A4A4A;
+    font-size: 20px !important;
+}
+
+.v-dialog .v-card .v-card__title span {
+    font-family: 'Inter-SemiBold', sans-serif !important;
+}
+
+.v-dialog .v-card .v-card__title .headline .warehouse-name {
+	font-size: 14px;
+    color: #6D858F;
+    margin-left: 8px;
+    font-family: 'Inter-Regular', sans-serif !important;
+}
+
+.v-dialog .v-card .v-card__title .btn-close {
+	color: #4a4a4a !important;
+}

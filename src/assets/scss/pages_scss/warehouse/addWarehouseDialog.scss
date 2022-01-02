@@ -1,0 +1,214 @@
+@import '../../colors.scss';
+
+.v-dialog {
+    &.warehouse-dialog {
+        font-family: 'Inter-Regular', sans-serif;
+
+        .v-card__text {
+            padding: 0 !important;
+
+            .add-wrapper {
+                display: flex;
+                min-height: 465px;
+
+                .warehouse-info {
+                    width: 40%;
+                    background-color: $table-hover-background;
+                    padding: 24px;   
+                    
+                    .v-input {
+                        .v-input__control {
+                            background-color: transparent !important;
+                        }
+                    }
+
+                    /* Vue telephone */
+                    .warehouse-contact-number {
+                        .text-fields {
+                            &.vue-tel-input-vuetify {
+                                position: relative;
+
+                                .country-code {
+                                    .v-input {
+                                        .v-input__control {
+                                            .v-input__slot {
+                                                margin-bottom: 0;
+
+                                                fieldset {
+                                                    border-right: none;
+                                                    border-top-right-radius: 0;
+                                                    border-bottom-right-radius: 0;
+                                                    border-top-left-radius: 4px !important;
+                                                    border-bottom-left-radius: 4px;
+                                                }
+                                            }
+
+                                            .v-text-field__details {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                .v-input {
+                                    .v-input__control {
+                                        .v-input__slot {
+                                            margin-bottom: 0;
+                                            height: 44px;
+
+                                            fieldset {
+                                                border: 1px solid $light-grey;
+                                                background-color: $white !important;
+                                                border-top-left-radius: 0 !important;
+                                                border-bottom-left-radius: 0;
+                                                font-size: 14px;
+                                            }
+
+                                            .v-label {
+                                                top: 12px;
+                                                font-size: 14px;
+                                                color: $light-grey;
+                                            }
+
+                                            .v-text-field__slot {
+                                                input {
+                                                    font-size: 14px;
+
+                                                    &::placeholder {
+                                                        color: $light-grey !important;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        .v-text-field__details {
+                                            position: absolute;
+                                            bottom: -26px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .warehouse-description {
+                    padding: 24px;
+                    width: 60%;
+                    margin-bottom: 15px;
+                }
+
+                .warehouse-title {
+                    font-size: 10px;
+                    color: $grey;
+                    text-transform: capitalize;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    margin-bottom: 0 !important;
+                }
+
+                .warehouse-img {
+                    .container {
+                        border-radius: 4px;
+                        border: 1px solid #b6d0e1;
+                        background-color: $white;
+                        padding: 0;
+                        margin: 0;
+                        width: auto;
+                        max-width: 162px;
+                        height: 162px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .beforeUpload {
+                            svg {
+                                width: 50px;
+                            }
+                        }
+
+                        p {
+                            width: 80%;
+                            margin: 0 auto;
+                            color: $light-grey;
+                        }
+
+                        .plus {
+                            display: none;
+                        }                        
+                    }
+                }
+
+                .v-input {
+                    margin-top: 0 !important;                    
+
+                    .v-radio {
+                        label {
+                            font-size: 14px !important;
+                            color: $default-text-color !important;
+                            font-family: 'Inter-Regular', sans-serif !important;
+                        }
+                    }
+
+                    &.text-fields {
+                        &.select-items {
+                            .v-input__control {
+                                .v-input__slot {
+                                    height: 45px;
+                                    
+                                    fieldset {
+                                        border: 1px solid $light-grey;
+                                        background-color: $white !important;
+                                    }
+                                }
+                            }                            
+
+                            &.v-input--is-disabled {
+                                .v-input__control {
+                                    .v-input__slot {
+                                        fieldset {
+                                            background-color: $divider-bg !important;
+                                            border-color: $divider-bg !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .v-text-field__details {
+                            display: block !important;
+                        }                       
+                    }
+                }
+            }
+        }
+
+        .v-card__actions button {
+            margin-right: 8px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+	.v-dialog {
+        &.warehouse-dialog {
+            margin: 0;
+            height: 100%;
+            max-height: 100% !important;
+            background-color: $white;
+
+            .v-card__text {
+                .add-wrapper {
+                    flex-direction: column;
+                    margin-bottom: 30px;
+
+                    .warehouse-info,
+                    .warehouse-description {
+                        width: 100%;
+                        padding: 16px;
+                    }
+                }
+            }
+        
+        }
+    }
+}

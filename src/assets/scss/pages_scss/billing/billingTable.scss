@@ -1,0 +1,359 @@
+@import '../../colors.scss';
+
+.billing-table-wrapper {
+    .v-data-table {
+        .v-tabs {
+            &.billing-tabs {
+                border: 1px solid $table-border !important;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+    
+                .v-slide-group__wrapper {
+                    .v-tab {
+                        font-size: 14px !important;
+                        padding: 14px 20px;
+                        text-transform: capitalize !important;
+                        letter-spacing: 0;
+                        font-family: 'Inter-SemiBold', sans-serif;
+                        color: $default-text-color !important;
+    
+                        &.v-tab--active {
+                            color: $dark-blue !important;
+                        }
+                    }
+                }
+                
+            }
+        }
+
+        &.billing-table {
+            margin-top: 24px;
+            border-radius: 0;
+            box-shadow: none !important;
+        
+            .v-toolbar {
+                border-radius: 4px;
+        
+                .v-toolbar__content {
+                    background-color: $light-white !important;
+                    padding: 0;
+        
+                    .v-toolbar__title {
+                        font-family: 'Inter-SemiBold', sans-serif !important;
+                        color: $default-text-color;
+                        font-size: 24px;
+                    }    
+                }
+
+                .manage-payment-methods-button {
+                    margin-left: 10px;
+                    height: 41px !important;
+                }
+            }
+
+            .v-data-table__wrapper {
+                table {
+                    border: 1px solid $table-border !important;
+                    border-bottom: none !important;
+                    border-top: none !important;
+                    box-shadow: none !important;
+
+                    thead {
+                        tr {
+                            th {
+                                padding: 11px 20px !important;
+                                color: $table-header-text-color !important;
+                                text-transform: uppercase;
+                                font-size: 12px;
+                                border-bottom: 1px solid $table-border !important;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:hover {
+                                background-color: $table-hover-background !important;
+                            }
+
+                            td {
+                                padding: 22px 20px !important;
+                                color: $default-text-color;
+                                border-bottom: 1px solid $table-border !important;
+
+                                small {
+                                    color: $dark-grey !important;
+                                    font-size: 14px;
+                                }
+
+                                .manage-action-buttons {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: center;
+
+                                    .btn-white {
+                                        margin-right: 8px;
+                                        min-width: 25px;
+                                        padding: 10px 14px !important;
+
+                                        &.icons {
+                                            padding: 10px 12px;
+                                        }
+
+                                        &.payment {
+                                            min-width: 140px;
+
+                                            &.paid {
+                                                color: $green;
+                                                border: 1px solid $table-border !important;
+                                                background-color: transparent !important;
+                                                
+                                                &:disabled {
+                                                    color: $green !important;
+                                                    border: 1px solid $table-border !important;
+                                                    background-color: transparent !important;
+                                                }
+
+                                                span {
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                }                                                
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 766px) {
+    .billing-table-wrapper {
+        .v-data-table {
+            box-shadow: none !important;
+
+            &.billing-table-mobile {
+                margin-top: 0;
+
+                .v-toolbar {  
+                    height: 70px !important;
+
+                    .v-toolbar__content {
+                        background-color: $light-white !important;
+                        padding: 16px;
+                        height: 70px !important;
+            
+                        .v-toolbar__title {
+                            font-family: 'Inter-SemiBold', sans-serif !important;
+                            color: $default-text-color;
+                            font-size: 20px;
+                        }
+
+                        .search-invoice {
+                            border: 1px solid $light-grey;
+                            border-radius: 4px;
+                            padding: 5px;
+                            height: 40px;
+                            width: 42px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: $white;
+                        }                       
+
+                        .search {
+                            opacity: 0;
+                            transition: all 0.3s ease;
+                            position: absolute;
+                            z-index: -1;
+
+                            &.expanded {
+                                background-color: $light-white;
+                                left: 16px;
+                                right: 16px;
+                                opacity: 1;
+                                z-index: 1;
+
+                                input {
+                                    height: 45px;
+                                    width: 75%;
+                                    font-size: 14px;
+                                    padding-left: 35px;
+                                    padding-right: 60px;
+                                    border: 1px solid $light-grey;
+                                    border-radius: 4px;
+                                    background-color: $white;
+
+                                    &::placeholder {
+                                        color: $light-grey !important;
+                                    }
+                                }
+                            }
+
+                            .input-search-icon {
+                                &.expanded {
+                                    position: absolute;
+                                    left: 10px;
+                                    top: 16px;
+                                }
+                            }
+                        }
+
+                        .close-btn {
+                            position: absolute;
+                            z-index: 100;
+                            margin-right: 0;
+                            right: 16px;
+                            background-color: $white;
+                            height: 45px;
+                            width: 20%;
+                            font-size: 14px;
+                            color: $dark-blue;
+                            border-radius: 4px;
+                            border: 1px solid $light-grey;
+                        }
+                    }
+    
+                    .manage-payment-methods-button {
+                        min-width: 40px;
+                        padding: 12px !important;
+                        margin-left: 10px;
+                    }
+                }
+
+                .v-data-table__wrapper {
+                    max-height: calc(100vh - 328px);
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    table {
+                        border: 1px solid $table-border !important;
+                        border-bottom: none !important;
+                        border-top: none !important;
+                        box-shadow: none !important;
+                        background-color: $white;
+    
+                        thead {
+                            display: none;
+                        }
+    
+                        tbody {
+                            tr {    
+                                td {
+                                    min-height: 30px;
+
+                                    .v-data-table__mobile-row__header {
+                                        display: none;
+                                    }
+
+                                    .v-data-table__mobile-row__cell {
+                                        width: 100%;
+
+                                        .layout-flex {
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            width: 100%;
+                                            margin-top: 15px;
+
+                                            p {
+                                                color: $default-text-color !important;
+                                                font-size: 14px;
+
+                                                &.darker {
+                                                    font-family: 'Inter-SemiBold', sans-serif;
+                                                }
+                                            }
+                                        }
+
+                                        .layout-inline {
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: center;
+                                            width: 100%;
+
+                                            .inline-title {
+                                                color: $dark-grey;
+                                                margin-bottom: 0;
+                                                margin-right: 8px;
+                                            }
+
+                                            .reference {
+                                                color: $dark-blue;
+                                            }
+                                        }
+
+                                        .manage-action-buttons {
+                                            margin: 16px 0;
+                                            display: flex;
+                                            justify-content: flex-start;
+                                            align-items: center;
+
+                                            button {
+                                                margin-right: 8px;
+
+                                                &.icons {
+                                                    padding: 10px 12px !important;
+                                                    min-width: 40px;
+                                                }
+
+                                                &.payment {
+                                                    min-width: 140px;
+        
+                                                    &.paid {
+                                                        color: $green;
+                                                        background-color: transparent !important;
+                                                        
+                                                        &:disabled {
+                                                            color: $green !important;
+                                                            background-color: transparent !important;
+                                                        }
+        
+                                                        span {
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                        }                                                
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    &:nth-child(5) {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    /* Scrollbar */
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                      
+                    /* Track */
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1; 
+                    }
+                       
+                    /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: #d3d3d3; 
+                    }
+                      
+                    /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #d3d3d3; 
+                    }
+                }
+            }
+        }
+    }
+}

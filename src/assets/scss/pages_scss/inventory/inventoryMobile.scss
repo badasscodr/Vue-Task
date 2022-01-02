@@ -1,0 +1,296 @@
+@import '../../colors.scss';
+
+.warehouse-mobile-view {
+    .warehouse-mobile-header {
+        padding: 16px 16px 8px;
+
+        .details-breadcrumbs {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .warehouse-link {
+                font-size: 14px;
+                text-decoration: none;
+                color: $default-text-color !important;
+                font-family: 'Inter-Medium', sans-serif;
+            }
+
+            .right-chevron {
+                padding: 3px 10px 0;
+            }
+
+            .mobile-warehouse-name {
+                font-size: 14px;
+                color: $dark-grey !important;
+                margin-bottom: 0;
+            }
+        }
+
+        
+    }
+
+    .warehouse-mobile-table {
+        .v-data-table {
+            &.inventory-table-mobile {
+                box-shadow: none !important;
+                background-color: $light-white !important;
+
+                .v-toolbar {
+                    background-color: $light-white !important;
+                    height: 120px !important;
+
+                    .v-toolbar__content {
+                        height: 95px !important;
+                        flex-direction: column;
+                        align-items: flex-start;
+
+                        .v-toolbar__title {
+                            font-size: 24px;
+                            color: $default-text-color;
+                            margin-bottom: 12px;
+
+                            span {                                
+                                font-family: 'Inter-SemiBold', sans-serif;
+                            }
+                        }
+                        
+                        .subheader-wrapper {
+                            .subheader-button {
+                                .btn-blue {
+                                    min-width: 130px !important;
+                                }
+
+                                .btn-white {
+                                    min-width: 40px !important;
+                                    margin-right: 8px;
+                                    padding: 10px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .inventory-search-wrapper {
+                    padding: 10px 16px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 2px solid $light-white;
+                    color: $dark-grey;
+                    background-color: $white !important;
+                    min-height: 62px;
+
+                    .search-warehouse {
+                        border: 1px solid $light-grey;
+                        border-radius: 4px;
+                        padding: 5px;
+                        height: 40px;
+                        width: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    .search {
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        position: absolute;
+                        z-index: -1;
+
+                        &.expanded {
+                            background-color: $white;
+                            left: 15px;
+                            right: 15px;
+                            opacity: 1;
+                            z-index: 1;
+
+                            input {
+                                height: 40px;
+                                width: calc(100% - 1px);
+                                font-size: 14px;
+                                padding-left: 35px;
+                                padding-right: 30px;
+                                border: 1px solid $light-grey;
+                                border-radius: 4px;
+
+                                &::placeholder {
+                                    color: $light-grey !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .input-search-icon {
+                        &.expanded {
+                            position: absolute;
+                            left: 10px;
+                            top: 12px;
+                        }
+                    }
+
+                    .inventory-count {
+                        color: $default-text-color !important;
+                        font-family: 'Inter-Medium', sans-serif;
+                    }
+
+                    .close-btn {
+                        position: absolute;
+                        z-index: 100;
+                        margin-right: 8px;
+                        right: 16px;
+                        background-color: $white;
+                        height: 35px;
+                        width: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .v-data-table__wrapper {
+                    max-height: calc(100vh - 357px);
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    table {
+                        background-color: $white;
+                        margin-bottom: 0;
+
+                        thead {
+                            display: none;
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    &.v-data-table__mobile-row {
+                                        &:nth-child(1n+3) {
+                                            border-bottom: 2px solid $light-white !important;
+                                        }
+
+                                        &:nth-child(1n+4) {
+                                            display: none;
+                                        }
+
+                                        .v-data-table__mobile-row__header {
+                                            display: none;
+                                        }
+
+                                        .v-data-table__mobile-row__cell {
+                                            width: 100%;
+
+                                            .inventory-wrapper {
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                &.content-start {
+                                                    width: 100%;
+                                                    display: flex;
+                                                    justify-content: flex-start;
+                                                    align-items: flex-start;
+
+                                                    .info-wrapper {
+                                                        text-align: start;
+
+                                                        p {
+                                                            margin-bottom: 0;
+                                                            font-size: 14px;
+
+                                                            &.inventory-info {
+                                                                color: $default-text-color;
+                                                            }
+                                                        }
+
+                                                        .p-grey {
+                                                            color: $dark-grey !important;
+                                                        }
+                                                    }
+                                                }
+
+                                                .sku {
+                                                    font-size: 16px;
+                                                    color: $default-text-color;
+                                                }
+
+                                                .btn-edit {
+                                                    border: 1px solid $light-grey;
+                                                    padding: 8px 10px;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    border-radius: 4px;
+
+                                                    &.has-inventory-count {
+                                                        opacity: 0.5;
+                                                        cursor: auto;
+                                                    }
+                                                }
+                                            }
+                                        }  
+                                    }                                          
+                                        
+                                    .no-data-wrapper,
+                                    .no-data-preloader {
+                                        height: calc(100vh - 380px);
+                                        padding: 15px;
+                                    }
+
+                                    .no-data-wrapper {
+                                        img {
+                                            margin-bottom: 5px;
+                                            margin-top: 20px;
+                                        }
+
+                                        h3 {
+                                            color: $default-text-color;
+                                            font-size: 20px;
+                                        }
+
+                                        p {
+                                            color: $default-text-color;
+                                            font-size: 16px;
+                                            margin-top: 10px;
+                                        }
+                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.no-data-table {
+                .v-data-table__wrapper {
+                    table {    
+                        tbody {
+                            tr {
+                                &:hover {
+                                    background-color: $white !important;
+                                }
+    
+                                td {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.no-data {
+            background-color: $white !important;
+            min-height: 500px;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+            margin-top: 50px;
+        }
+    }
+}

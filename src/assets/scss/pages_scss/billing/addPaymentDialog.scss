@@ -1,0 +1,111 @@
+@import '../../colors.scss';
+
+.add-payment-dialog {
+    .v-card {
+        .v-card__text {
+            min-height: 300px;
+            padding: 24px;
+
+            .add-payment-wrapper {
+                .add-payment-info {
+                    .col {
+                        padding-bottom: 0 !important;
+                        padding-top: 5px;
+                    }
+
+                    .card-name {
+                        .card-title {
+                            color: $grey;
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+
+                .v-input {
+                    &.payment-checkbox {
+                        .v-input__slot {
+                            margin-bottom: 0;
+    
+                            .v-input--selection-controls__input {
+                                margin-right: 6px;
+                            }
+    
+                            label {
+                                font-size: 12px !important;
+                                color: $default-text-color;
+                            }
+                        }
+                    }
+
+                    .v-input__control {
+                        background-color: $white;
+                    }
+                    
+                    .v-text-field__details {
+                        display: block;
+                        margin-bottom: 0;
+                    }
+                }                
+            }
+        }
+
+        .v-card__actions {
+            button {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .add-payment-dialog {
+        margin: 0 !important;
+        height: 100%;
+        max-height: 100% !important;
+        background-color: #fff;
+
+        .v-card {
+            box-shadow: none !important;
+
+            .v-card__text {
+                margin-bottom: 20px;
+    
+                .add-payment-wrapper {
+                    .add-payment-info {    
+                        .col-12 {
+                            padding-bottom: 0 !important;
+                            padding-top: 5px;
+                        }
+
+                        .card-name {
+                            .card-title {
+                                font-size: 12px;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+    
+                    .v-input {
+                        &.payment-checkbox {
+                            .v-input__slot {        
+                                label {
+                                    font-size: 12px !important;
+                                    color: $default-text-color;
+                                }
+                            }
+                        }
+                    }                
+                }
+            }
+    
+            .v-card__actions {
+                button {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}

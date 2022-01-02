@@ -1,0 +1,199 @@
+@import '../colors.scss';
+
+.sidebar {
+    background-color: $dark-blue;
+    min-height: 100vh;
+
+    .logo {
+        padding: 28px 24px 15px;
+
+        .shipment-logo {
+            background-color: transparent !important;
+            border: none !important;
+
+            img {
+                width: 125px;
+            }
+        }
+    }
+
+    ul {
+        &.links {
+            padding-left: 0 !important;
+
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    color: $white-to-blue;
+                    padding-left: 10px;
+                    text-decoration: none;
+                    height: 48px;
+                    border-left: 6px solid $dark-blue;
+                    font-family: "Inter-Regular", sans-serif;
+                    font-size: 16px;
+                    
+                    &.router-link-exact-active,
+                    &.active-link {
+                        background-color: $dark-blue-active;
+                        border-left: 6px solid $light-blue;
+                        color: $white;
+
+                        &:hover {
+                            background-color: $dark-blue-active !important;
+                            border-left: 6px solid $light-blue !important;
+                        }
+                    }
+
+                    > img {
+                        margin-right: 15px;
+                        width: 22px;
+                        height: 22px;
+                    }
+
+                    &:hover {
+                        background-color: $hover-blue;
+                        border-left: 6px solid $hover-blue;
+                    }
+                }
+            }
+
+            .settings-popup-menu {     
+                border-left: 6px solid $dark-blue;
+
+                &:hover {
+                    background-color: $hover-blue !important;
+                    border-left: 6px solid $hover-blue !important;
+
+                    button {
+                        background-color: $hover-blue !important;
+                    }
+                }
+
+                &.active-link {
+                    background-color: $dark-blue-active;
+                    border-left: 6px solid $light-blue;
+                    color: $white;
+
+                    &:hover {
+                        background-color: $dark-blue-active !important;
+                        border-left: 6px solid $light-blue !important;
+                    }
+
+                    .settings-btn {
+                        background-color: $dark-blue-active !important;
+                    }
+                }
+                
+                .settings-btn {
+                    width: 100%;
+                    box-shadow: none !important;
+                    height: 48px;
+                    text-transform: capitalize;
+                    background-color: $dark-blue !important;
+                    font-size: 16px;
+                    border-radius: 0;
+                    padding: 0;
+
+                    .settings-menu-group {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                    }
+
+                    &::before {
+                        opacity: 0;
+                    }
+
+                    img {
+                        margin-right: 15px;
+                    }
+
+                    .v-btn__content {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-family: "Inter-Regular", sans-serif;
+                        letter-spacing: 0;
+                        color: $white-to-blue;
+
+                        a {
+                            width: 100%;
+                            height: 48px;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding-left: 10px;
+                            color: $white-to-blue;
+                            text-decoration: none;
+
+                            img {
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        margin: 0;
+        font-size: 12px;
+        color: $white-to-blue;
+        font-weight: 500;
+        line-height: 18px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* mobile classes */
+    .btn-logout-mobile {
+        align-items: center !important;
+        color: $white-to-blue !important;
+        padding-left: 15px !important;
+        text-decoration: none !important;
+        height: 48px !important;
+        border-left: 6px solid $dark-blue !important;
+        font-family: "Inter-Regular", sans-serif !important;
+        font-size: 15px !important;
+        background-color: $dark-blue !important;
+        box-shadow: none !important;
+        letter-spacing: 0 !important;
+        text-transform: capitalize !important;
+
+        &:hover {
+            background-color: transparent !important;
+        }
+
+        img {
+            margin-right: 16px;
+        }
+
+        .v-btn__content {
+            font-family: "Inter-Regular", sans-serif !important;
+        }
+    }
+
+    .v-avatar {
+        i.account {
+            color: $white !important;
+            font-size: 20px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .sidebar {
+        .logo {
+            padding-bottom: 0 !important;
+        }
+
+        .footer {
+            display: none;
+        }
+    }
+}

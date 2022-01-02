@@ -1,0 +1,367 @@
+.milestone-shipments .v-stepper {
+	box-shadow: none !important;
+}
+
+.milestone-shipments .v-stepper__content {
+	padding: 0 35px 16px 23px !important;
+}
+
+.milestone-shipments .v-stepper__wrapper {
+	height: auto !important;
+	line-height: unset;
+}
+
+.milestone-shipments .v-stepper__label {
+	color: #0171a1 !important;
+	font-size: 14px !important;
+	text-transform: capitalize;
+	font-family: 'Inter-SemiBold', sans-serif;
+	line-height: 1.5;
+}
+
+.theme--light.v-stepper .v-stepper__step--active .v-stepper__label {
+	text-shadow: none !important;
+}
+
+.milestone-shipments small {
+	color: #6d858f !important;
+	font-size: 12px !important;
+}
+
+.milestone-shipments .v-stepper--vertical .v-stepper__step {
+	padding: 24px 10px 16px;
+	/* padding: 20px 10px 2px;
+    margin: 10px 0 10px 0; */
+}
+
+.milestone-shipments .v-stepper--vertical .v-stepper__step .released-event {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.milestone-shipments .v-stepper .v-stepper__content {
+	border-left-style: dotted !important;
+	border-width: 3px !important;
+	border-color: #0171a1 !important;
+	margin: -8px -35px -16px 20px !important;
+}
+
+.milestone-shipments
+.v-stepper__step.v-stepper__step--inactive.v-stepper__step--complete
+.v-stepper__label {
+	color: #0171a1 !important;
+	font-family: "Inter-SemiBold", sans-serif;
+	width: 100%;
+}
+
+/* INACTIVE */
+.milestone-shipments .v-stepper__step.v-stepper__step--inactive .v-stepper__label {
+	color: #819FB2 !important;
+	width: 100%;
+}
+
+/* Remove border on last stepper content */
+.milestone-content .milestone-items:last-child .v-stepper__content {
+    border: none !important;
+    padding: 0 35px 16px 26px !important;
+}
+
+small img.completed-icon {
+	margin-right: 5px;
+}
+
+.milestone-items .information {
+	font-size: 14px;
+}
+
+
+/* NO MILESTONE */
+.milestone-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	min-height: 24px;
+}
+
+.milestone-container-wrapper .milestone-container-num p {
+    font-size: 14px;
+}
+
+.milestone-shipments .milestone-empty-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.milestone-shipments .milestone-empty-wrapper .milestone-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 200px;
+}
+
+.milestone-shipments .milestone-empty-wrapper .milestone-empty img,
+.milestone-shipments .milestone-empty-wrapper .milestone-empty h4 {
+    margin-bottom: 10px;
+}
+
+.milestone-shipments .milestone-empty-wrapper .milestone-empty p {
+    font-size: 14px;
+    color: #6D858F;
+}
+
+.custom-vue-stepper .v-stepper__step__step i {
+	display: none !important;
+}
+
+/* RELEASED EVENT */
+.milestone-container-wrapper.released {
+	flex-direction: column;
+    align-items: flex-start;
+}
+
+.milestone-container-wrapper.released .milestone-container-num {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.milestone-container-wrapper.released .milestone-container-status {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.milestone-container-wrapper.released .milestone-container-status .status {
+	text-transform: capitalize;
+    font-size: 12px;
+    color: #F93131;
+    background-color: #FFEBEB;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin: 5px 8px 8px 0;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+
+.milestone-shipments .v-stepper--vertical .v-stepper__step .released-event .status {
+	display: none;
+	text-transform: capitalize;
+    font-size: 12px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+/* .v-stepper__step.v-stepper__step--inactive.custom-vue-stepper.released.has-null .status {
+	display: none;
+} */
+
+.v-stepper__step.v-stepper__step--inactive.custom-vue-stepper.released.has-data .status.no {
+    color: #F93131 !important;
+    background-color: #FFEBEB;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.milestone-shipments .v-stepper--vertical .v-stepper__step .released-event .status.yes {
+    color: #16B442 !important;
+    background-color: #EBFAEF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+	.map-wrapper {
+		padding: 8px;
+    	background-color: #f1f6fa;
+	}
+
+	.map-wrapper .map-content {
+		min-height: 50px !important;
+    	padding: 11px 16px !important;
+		margin-bottom: 0 !important;
+	}
+
+	.map-wrapper .map-content h2 {
+		font-size: 16px;
+	}
+
+	.milestone-shipments .milestone-content {
+		padding: 0 15px 0 5px;
+	}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1199px) {
+	.milestone-shipments .milestone-content {
+		padding: 0;
+	}
+
+	.milestone-container-wrapper .milestone-container-num p {
+		font-size: 12px !important;
+		font-family: 'Inter-Medium', sans-serif;
+	}
+
+	.milestone-shipments .v-stepper--vertical .v-stepper__step {
+		padding: 24px 0 16px;
+	}
+
+	.milestone-shipments .v-stepper .v-stepper__content {
+		margin: -8px -35px -16px 10px !important;
+	}
+}
+
+.custom-vue-stepper .v-stepper__step__step {
+	border-radius: 0 !important;
+    padding: 2px;
+    background-repeat: no-repeat !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    margin-right: 10px !important;
+	width: 26px;
+    height: 26px;
+}
+
+/* Not Completed */
+.custom-vue-stepper.booking-created .v-stepper__step__step  {
+	background-image: url('../../icons/created.svg') !important;
+}
+
+.custom-vue-stepper.booking-confirmed .v-stepper__step__step  {
+	background-image: url("../../icons/confirmed.svg") !important;
+}
+
+.custom-vue-stepper.empty_out .v-stepper__step__step {
+	background-image: url("../../icons/emptyGatedOut.svg") !important;
+}
+
+.custom-vue-stepper.full_in .v-stepper__step__step {
+	background-image: url("../../icons/fullGatedIn.svg") !important;
+}
+
+.custom-vue-stepper.check .v-stepper__step__step {
+	background-image: url("../../icons/check-not-completed.svg") !important;
+}
+
+.custom-vue-stepper.released .v-stepper__step__step {
+	background-image: url("../../icons/releasedAtTerminal.svg") !important;
+}
+
+.custom-vue-stepper.released.has-data .v-stepper__label span {
+    color: #F93131 !important;
+}
+
+.custom-vue-stepper.eta_logs .v-stepper__step__step {
+	background-image: url("../../icons/etaLog.svg") !important;
+}
+
+.custom-vue-stepper.released .v-stepper__step__step {
+	background-image: url("../../icons/releasedAtTerminalNoData.svg") !important;
+}
+
+.custom-vue-stepper.departed .v-stepper__step__step {
+	background-image: url("../../icons/departed.svg") !important;
+}
+
+.custom-vue-stepper.arrived .v-stepper__step__step {
+	background-image: url("../../icons/arrived.svg") !important;
+}
+
+.custom-vue-stepper.vessel_discharged .v-stepper__step__step {
+	background-image: url("../../icons/discharged.svg") !important;
+	padding: 2px;
+    background-repeat: no-repeat !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    margin-right: 10px !important;
+	width: 28px;
+    height: 30px;
+}
+
+.custom-vue-stepper.last_free_day .v-stepper__step__step {
+	background-image: url("../../icons/calendar.svg") !important;
+}
+
+.custom-vue-stepper.full_out .v-stepper__step__step {
+	background-image: url("../../icons/fullGatedOut.svg") !important;
+}
+
+.custom-vue-stepper.empty_in .v-stepper__step__step {
+	background-image: url("../../icons/emptyGatedIn.svg") !important;
+}
+
+/* Completed */
+.custom-vue-stepper.booking-created.v-stepper__step--complete .v-stepper__step__step  {
+	background-image: url('../../icons/bookingCreated.svg') !important;
+}
+
+.custom-vue-stepper.booking-confirmed.v-stepper__step--complete .v-stepper__step__step  {
+	background-image: url("../../icons/bookingConfirmed.svg") !important;
+}
+
+.custom-vue-stepper.empty_out.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/emptyGatedOutCompleted.svg") !important;
+}
+
+.custom-vue-stepper.full_in.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/fullGatedInComplete.svg") !important;
+}
+
+.custom-vue-stepper.check.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/check-completed.svg") !important;
+}
+
+.custom-vue-stepper.released.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/releasedAtTerminalCompleted.svg") !important;
+}
+
+.custom-vue-stepper.released.v-stepper__step--complete .v-stepper__label span {
+    color: #0171A1 !important;
+}
+
+.custom-vue-stepper.departed.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/bookingDeparted.svg") !important;
+}
+
+.custom-vue-stepper.arrived.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/arrivedCompleted.svg") !important;
+}
+
+.custom-vue-stepper.vessel_discharged.v-stepper__step--complete .v-stepper__step__step {
+	/* background-image: url("../../icons/dischargedComplete.svg") !important; */
+    background-image: url("../../icons/dischargedComplete-blue.svg") !important;
+	padding: 2px;
+    background-repeat: no-repeat !important;
+    color: transparent !important;
+    background-color: transparent !important;
+    margin-right: 10px !important;
+	width: 28px;
+    height: 30px;
+}
+
+.custom-vue-stepper.last_free_day.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/calendarCompleted.svg") !important;
+}
+
+.custom-vue-stepper.appointment.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/appointmentComplete.svg") !important;
+}
+
+/* .custom-vue-stepper.vessel_discharged.v-stepper__step--complete .v-stepper__label span {
+	color: #EB9B26 !important;
+} */
+
+.custom-vue-stepper.full_out.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/fullGatedOutCompleted.svg") !important;
+}
+
+.custom-vue-stepper.empty_in.v-stepper__step--complete .v-stepper__step__step {
+	background-image: url("../../icons/emptyGatedInCompleted.svg") !important;
+}

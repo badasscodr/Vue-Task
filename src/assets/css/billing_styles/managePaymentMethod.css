@@ -1,0 +1,167 @@
+.manage-payment-methods-wrapper {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.manage-payment-methods-wrapper .v-data-table.methods-table.elevation-1 {
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+.manage-payment-methods-wrapper .v-data-table.methods-table .v-toolbar {
+    border-radius: 4px;
+}
+
+.manage-payment-methods-wrapper .v-data-table.methods-table .v-toolbar .v-toolbar__title {
+    font-family: 'Inter-SemiBold', sans-serif !important;
+    color: #4A4A4A;
+    font-size: 24px;
+}
+
+.manage-payment-methods-wrapper .v-data-table.methods-table .v-toolbar .manage-payment-methods-button {
+    background-color: #fff !important;
+	border: 1px solid #B4CFE0 !important;
+    color: #0171A1 !important;
+    padding: 10px 16px !important;
+    font-size: 14px;
+    height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    border-radius: 4px;
+    font-family: 'Inter-Regular', sans-serif;
+    box-shadow: none !important;
+    margin-left: 8px;
+}
+
+
+.manage-payment-methods-wrapper .v-data-table.methods-table .v-toolbar .v-toolbar__content {
+    background-color: #F1F6FA !important;
+    padding: 0;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-tabs.method-tabs {
+    border-bottom: 2px solid #d2e3ed !important;
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-tabs.method-tabs .v-slide-group__wrapper .v-tab {
+    font-size: 14px !important;
+    padding: 14px 20px;
+    text-transform: capitalize !important;
+    letter-spacing: 0;
+    font-family: 'Inter-SemiBold', sans-serif;
+    color: #4a4a4a !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-tabs.method-tabs .v-slide-group__wrapper .v-tab.v-tab--active {
+    color: #0171A1 !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .tab-name .tab-method {
+    padding: 20px 24px;
+    margin-top: 10px;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper {
+    padding: 0 24px;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table {
+    /* border: 1px solid #d2e3ed !important; */
+    border-bottom: none !important;
+    border-top: none !important;
+    box-shadow: none !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table thead tr th {
+    padding: 11px 20px !important;
+    color: #819FB2 !important;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: 2px solid #E1ECF0 !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table tbody tr td {
+    padding: 22px 20px !important;
+    color: #4a4a4a;
+    border-bottom: 1px solid #E1ECF0 !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table tbody tr td small {
+    color: #6D858F !important;
+    font-size: 14px;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table tbody tr:hover {
+    background-color: #f7f7f7 !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .v-data-table__wrapper table tbody tr td .manage-action-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-blue {
+    background-color: #0171A1 !important;
+    margin-bottom: 0 !important;
+    color: #fff !important;
+    padding: 10px 16px;
+    font-size: 14px;
+    height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    box-shadow: none;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white {
+    height: 40px !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    background-color: #fff !important;
+    color: #0171A1;
+    font-size: 14px;
+    padding: 10px 18px;
+    border-radius: 4px;
+    border: 1px solid #B4CFE0 !important;
+    box-shadow: none !important;
+    margin-right: 8px;
+    min-width: 30px;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white.icons {
+    padding: 10px 12px;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white.payment {
+    min-width: 140px;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white.payment.paid {
+    color: #16B442;
+    border: 1px solid #E1ECF0 !important;
+    background-color: transparent !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white.payment.paid:disabled {
+    color: #16B442 !important;
+    border: 1px solid #E1ECF0 !important;
+    background-color: transparent !important;
+}
+
+.manage-payment-methods-wrapper .methods-table .btn-white.payment.paid span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

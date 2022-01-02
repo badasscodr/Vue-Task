@@ -1,0 +1,53 @@
+.v-dialog .v-card .v-card__actions {
+	border-top: 2px solid #E1ECF0;
+	height: 70px;
+    position: sticky;
+    z-index: 9999;
+    bottom: 1px;
+    padding: 10px 24px;
+    background-color: #fff;
+}
+
+.v-dialog .v-card .v-card__actions .btn-blue {
+	background-color: #0171A1;
+    color: #fff !important;
+    padding: 10px 16px;
+    font-size: 14px;
+    height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    border-radius: 4px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.v-dialog .v-card .v-card__actions .btn-blue:disabled {
+    background-color: #B3CFE0 !important;
+}
+
+.v-dialog .v-card .v-card__actions .btn-white {
+	background-color: #fff;
+	border: 1px solid #B4CFE0;
+    color: #0171A1 !important;
+    padding: 10px 16px !important;
+    font-size: 14px;
+    height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    border-radius: 4px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.v-dialog .v-card .v-card__actions .btn-white:disabled {
+    border: 1px solid #E1ECF0;
+    color: #B4CFE0 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .v-dialog .v-card .v-card__actions {
+        position: fixed;
+        width: 100%;
+        bottom: -1px;
+        /* padding: 8px; */
+        padding: 8px 12px !important;
+    }
+}

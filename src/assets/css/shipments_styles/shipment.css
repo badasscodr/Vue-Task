@@ -1,0 +1,498 @@
+#shipments_header {
+    background-color: white;
+}
+
+#shipments_root {
+    display: flex;
+    align-items: center;
+    border: 2px solid #E2EDF3;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+/* TABS */
+/* .v-tabs.customTab {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #E1ECF0;
+    border-bottom: none;
+} */
+
+.v-tabs.customTab .v-tab {
+    font-family: 'Inter-SemiBold', sans-serif;
+    color: #4A4A4A !important;
+    font-size: 14px !important;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    padding: 18px 20px;
+}
+
+/* BADGE */
+#shipments_root .v-tabs.customTab .v-tab {
+    padding: 18px 25px !important;
+}
+
+#shipments_root .v-tabs.customTab .v-tab .tab-name {
+    margin-right: 6px;
+}
+
+#shipments_root .v-tabs.customTab .v-tab span {
+    font-family: 'Inter-SemiBold', sans-serif;
+}
+
+#shipments_root .v-tabs.customTab .v-tab .tab-name-completed {
+    margin-right: 0;
+}
+
+#shipments_root .v-tabs.customTab .v-tab .v-badge .v-badge__wrapper {
+    position: unset;
+}
+
+#shipments_root .v-tabs.customTab .v-tab .v-badge.customBadge .v-badge__badge  {
+    position: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    min-width: 25px;
+    border-radius: 25px;
+    padding: 6px;
+}
+
+#shipments_root .v-tabs.customTab .v-tab.v-tab--active .v-badge.customBadge .v-badge__badge {
+    background-color: #0171A1 !important;
+}
+
+.v-tabs.customTab .v-tab.v-tab--active {
+    color: #0171A1 !important;
+}
+
+/* FILTERS WRAPPER AND SEARCH */
+.filters-wrapper {
+    border: 2px solid #E1ECF0;
+    border-top: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.filters-wrapper #filters {
+    height: 40px;
+    box-shadow: none;
+    border: 1px solid #B3CFE0;
+    background-color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-size: 14px;
+    width: 110px;
+    color: #002F44 !important;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.search-shipment {
+    height: 40px;
+    outline: 0;
+}
+
+.search-shipment .search .v-input__slot {
+    height: 40px !important;
+    width: 400px;
+    outline: 0;
+}
+
+.search-shipment .search:focus,
+.search-shipment .search .v-input__slot:focus {
+    outline: 0 !important;
+}
+
+.search-shipment .search .v-input__slot input {
+    font-size: 14px;
+    outline: 0;
+}
+
+.search-shipment .search .v-input__slot .v-input__icon.v-input__icon--prepend-inner i {
+    color: #002F44 !important;
+    font-size: 22px;
+}
+
+.search-shipment .search fieldset {
+    border: 1px solid #B3CFE0;
+    font-size: 14px;
+}
+
+.search-shipment .search fieldset:focus {
+    border: 1px solid #B3CFE0 !important;
+    outline: 0;
+}
+
+.search-shipment .v-text-field__slot input::placeholder {
+    color:#B4CFE0 !important;
+}
+
+/* TABLE */
+.containerMain {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.containerMain .v-data-table {
+    box-shadow: none !important;
+    border-radius: 0;
+    border: 2px solid #E1ECF0;
+    border-top: none;
+    border-bottom: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+/* table header */
+.containerMain .v-data-table .v-data-table__wrapper table .v-data-table-header tr th {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #819FB2;
+    border-bottom: 1px solid #E1ECF0 !important;
+    padding: 11px 20px;
+}
+
+/* table body */
+.containerMain .v-data-table .v-data-table__wrapper p {
+    margin-bottom: 0 !important;
+    font-size: 14px !important;
+}
+
+/* .containerMain .v-data-table .v-data-table__wrapper span {
+    font-family: 'Inter-Regular', sans-serif !important;
+} */
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr:hover {
+    background-color: #F7F7F7 !important;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr:hover .status .v-chip {
+    background-color: #fff !important;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr {
+    cursor: pointer;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr td {
+    font-size: 14px !important;
+    color: #4A4A4A;
+    font-weight: 400;
+    padding: 8px 20px 12px;
+    border-bottom: 2px solid #F1F6FA !important;
+}
+
+/* No Data Table */
+.containerMain .v-data-table#table-no-data {
+    border-bottom: 2px solid #E1ECF0;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr.v-data-table__empty-wrapper:hover {
+    background-color: #ffffff !important;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr.v-data-table__empty-wrapper {
+    cursor: unset;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr.v-data-table__empty-wrapper td {
+    border-bottom: none !important;
+}
+
+.containerMain .v-data-table#table-no-data thead {
+    display: none;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody tr.v-data-table__empty-wrapper td .no-data-preloader,
+.containerMain .v-data-table .v-data-table__empty-wrapper .no-data-wrapper {
+    height: calc(100vh - 230px);
+    padding-top: 30px;
+}
+
+.containerMain .v-data-table .v-data-table__empty-wrapper .no-data-wrapper .no-data-heading {
+    margin-top: 15px;
+}
+
+.containerMain .v-data-table .v-data-table__empty-wrapper .no-data-wrapper .no-data-heading p {
+    font-size: 20px;
+    color: #4A4A4A;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+/* mode column */
+.containerMain .v-data-table.shipments-table .v-data-table__wrapper table tbody tr td:nth-child(3) {
+    padding: 0;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody .supplier-desktop,
+.containerMain .v-data-table .v-data-table__wrapper table tbody .po-num-desktop p { 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody .status .v-chip {
+    padding: 6px 10px !important;
+    border-radius: 99px !important;
+    font-size: 12px !important;
+    background-color: #f1f6fa !important;
+    color: #4a4a4a !important;
+    /* margin-bottom: 5px !important; */
+    font-family: 'Inter-Medium', sans-serif !important;
+}
+
+.containerMain .v-data-table .v-data-table__wrapper table tbody .status .v-chip .v-chip__content {
+    font-family: 'Inter-Medium', sans-serif !important;
+}
+
+@media screen and (max-width: 767px) {
+    .v-tabs.customTab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #shipments_root {
+        flex-direction: column-reverse;
+    }
+
+    #shipments_root .v-tabs.customTab .v-tab {
+        padding: 0 15px !important;
+    }
+
+    #shipments_root .create-shipment-button {
+        width: 100%;
+        padding: 16px 16px 8px;
+    }
+
+    #shipments_root .create-shipment-button .custom-button {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerMain {
+        padding: 0;
+    }
+
+    .v-tabs.customTab .v-tab {
+        font-size: 14px;
+        padding: 0 18px !important;
+    }
+
+    .v-tabs.customTab .v-slide-group__prev,
+    .v-tabs.customTab .v-slide-group__next {
+        display: none !important;
+    }
+
+    /* Filter wrappper */
+    .filters-wrapper {
+        background-color: #f1f6fa !important;
+        border-bottom: none;
+        border-top: 1px solid #E1ECF0;
+        padding: 18px 15px;
+    }
+
+    .search-shipment {
+        width: 100%;
+    }
+
+    .search-shipment .search fieldset {
+        background-color: #fff !important;
+    }
+
+    .search-shipment .search .v-input__slot {
+        width: 100%;
+        border-color: #B4CFE0 !important;
+        background-color: #fff;
+    }
+
+    .search-shipment .search .v-input__slot .v-input__icon.v-input__icon--prepend-inner i {
+        z-index: 1;
+    }
+
+    /* No data table */
+    .containerMain .v-data-table#table-no-data .v-data-table__wrapper table {
+        padding: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .containerMain .v-data-table .v-data-table__wrapper table tbody tr.v-data-table__empty-wrapper td .no-data-preloader,
+    .containerMain .v-data-table .v-data-table__empty-wrapper .no-data-wrapper {
+        height: calc(100vh - 180px) !important;
+        padding-top: 150px;
+    }
+
+    /* Table mobile */
+    .containerMain .v-data-table.table-mobile {
+        background-color: #f1f6fa !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .v-data-table__wrapper table {
+        margin-bottom: 75px;
+        padding: 0 15px;
+    }
+
+    .containerMain .v-data-table.table-mobile thead {
+        display: none !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .v-data-table__wrapper table tbody tr td {
+        background-color: #fff !important;
+        border: none !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .v-data-table__mobile-table-row 
+    .v-data-table__mobile-row .v-data-table__mobile-row__header {
+        display: none !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .v-data-table__mobile-table-row 
+    .v-data-table__mobile-row .v-data-table__mobile-row__cell {
+        width: 100%;
+    }
+
+    .containerMain .v-data-table.table-mobile .v-data-table__mobile-table-row 
+    .v-data-table__mobile-row .v-data-table__mobile-row__cell .table-mobile-data {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }   
+    
+    .containerMain .v-data-table.table-mobile td.v-data-table__mobile-row:nth-child(1) {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border: 2px solid #E1ECF0 !important;
+        border-bottom: none !important;
+        padding-bottom: 0;
+    } 
+
+    /* FOR SHIPMENTS AND COMPLETED TAB TABLE */
+    .containerMain .v-data-table.table-mobile.shipments-table-mobile td.v-data-table__mobile-row:nth-child(2),
+    .containerMain .v-data-table.table-mobile.shipments-table-mobile td.v-data-table__mobile-row:nth-child(3) {
+        border: 2px solid #E1ECF0 !important;
+        border-bottom: none !important;
+        border-top: none !important;
+        padding-bottom: 0 !important;
+        padding-top: 12px !important;
+    } 
+
+    .containerMain .v-data-table.table-mobile.shipments-table-mobile td.v-data-table__mobile-row:nth-child(4) {
+        margin-bottom: 10px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: 2px solid #E1ECF0 !important;
+        border-top: none !important;
+    }
+
+    /* Hide 5 onwards td's in mobile */
+    .containerMain .v-data-table.table-mobile.shipments-table-mobile td.v-data-table__mobile-row:nth-child(1n+5) {
+        display: none;
+    }
+
+    /* FOR PENDING TAB TABLE*/
+    .containerMain .v-data-table.table-mobile .mobile-reference .mobile-reference-content {
+        font-size: 16px;
+        font-family: 'Inter-Bold', sans-serif;
+    }
+
+    .containerMain .v-data-table.table-mobile.pending-header-mobile td.v-data-table__mobile-row:nth-last-child(2),
+    .containerMain .v-data-table.table-mobile.pending-header-mobile td.v-data-table__mobile-row:last-child {
+        display: none;
+    }
+
+    .containerMain .v-data-table.table-mobile.pending-header-mobile td.v-data-table__mobile-row:nth-child(2),
+    .containerMain .v-data-table.table-mobile.pending-header-mobile td.v-data-table__mobile-row:nth-child(3) {
+        border: 1px solid #E1ECF0 !important;
+        border-bottom: none !important;
+        border-top: none !important;
+        padding-bottom: 0 !important;
+        min-height: 35px;
+    } 
+
+    .containerMain .v-data-table.table-mobile.pending-header-mobile td.v-data-table__mobile-row:nth-child(4) {
+        margin-bottom: 10px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border: 1px solid #E1ECF0 !important;
+        border-top: none !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-reference .status-mobile .v-chip {
+        padding: 6px 8px !important;
+        border-radius: 4px !important;
+        font-size: 12px !important;
+        background-color: #f1f6fa !important;
+        color: #4a4a4a !important;
+        font-weight: 800 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-supplier {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-bottom: 0;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-supplier .mobile-supplier-content {
+        width: 100%;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-supplier .mobile-supplier-content p {
+        font-size: 12px;
+        color: #4a4a4a !important;
+        text-align: left !important;
+        max-width: 70vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-pos {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-pos p {
+        margin: 0 !important;
+        font-size: 12px;
+        color: #819fb2 !important;
+        text-align: left;
+        max-width: 75vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-pos p span {
+        color: #4A4A4A !important;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-cargo-date {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-cargo-date p {
+        color: #819fb2 !important;
+        margin-bottom: 0;
+    }
+
+    .containerMain .v-data-table.table-mobile .mobile-cargo-date p span {
+        color: #4A4A4A !important;
+    }
+}

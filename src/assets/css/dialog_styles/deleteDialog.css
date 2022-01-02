@@ -1,0 +1,54 @@
+.item-delete-dialog .delete-dialog {
+    font-family: 'Inter-Regular', sans-serif;
+}
+.item-delete-dialog .delete-dialog .v-card__title.headline {
+    border: none !important;
+}
+.item-delete-dialog .delete-dialog .v-card__actions.delete-btn-wrapper {
+    border: none !important;
+}
+.item-delete-dialog .delete-dialog .v-card__text {
+    margin-bottom: 0 !important;
+}
+.item-delete-dialog .delete-dialog .v-card__actions {
+    position: unset !important;
+}
+.item-delete-dialog .delete-dialog h2 {
+    color: #4A4A4A; 
+    font-size: 20px; 
+    margin-bottom: 10px;
+}
+.item-delete-dialog .delete-dialog p {
+    margin-bottom: 0; 
+    font-size: 14px; 
+    color: #4A4A4A;
+}
+.item-delete-dialog .delete-dialog .v-card__actions.delete-btn-wrapper button {
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-size: 14px;
+    min-width: 76px;
+    margin-bottom: 10px;
+    height: 40px;
+    box-shadow: none;
+}
+.item-delete-dialog .delete-dialog .v-card__actions .delete-btn {
+    background-color: #0171A1 !important;
+    color: #fff;
+}
+.item-delete-dialog .delete-dialog .v-card__actions .cancel-btn {
+    background-color: #0171a100 !important;
+    color: #0171A1;
+    border: 1px solid #B3CFE0 !important;
+}
+
+@media screen and (max-width: 767px) {
+    .item-delete-dialog .delete-dialog .v-card__title.headline {
+        padding-bottom: 0 !important;
+    }
+
+   .item-delete-dialog .delete-dialog .v-card__actions {
+        height: 60px !important;
+        padding: 8px 16px !important;
+    }
+}

@@ -1,0 +1,583 @@
+@import '../../colors.scss';
+
+.containerMain {
+    font-family: 'Inter-Regular', sans-serif;
+
+    #shipments_header {
+        background-color: $white;
+        font-family: 'Inter-Regular', sans-serif;
+
+        #shipments_root {
+            display: flex;
+            align-items: center;
+            border: 2px solid $custom-shipment-border;
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            font-family: 'Inter-Regular', sans-serif;
+
+            .v-tabs {
+                &.customTab {
+                    .v-tab {
+                        font-family: 'Inter-SemiBold', sans-serif;
+                        color: $default-text-color !important;
+                        font-size: 14px !important;
+                        letter-spacing: 0;
+                        text-transform: capitalize;
+                        padding: 18px 25px !important;
+
+                        .tab-name {
+                            margin-right: 6px;
+                            font-weight: 600;
+                        }
+
+                        .tab-name-completed {
+                            margin-right: 0;
+                            font-weight: 600;
+                        }
+
+                        .v-badge {
+                            &.customBadge {
+                                .v-badge__wrapper {
+                                    position: unset;
+
+                                    .v-badge__badge  {
+                                        position: unset;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 25px;
+                                        min-width: 25px;
+                                        border-radius: 25px;
+                                        padding: 6px;
+                                        font-weight: 600;
+                                    }
+                                }
+                            }
+                        }
+
+                        &.v-tab--active {
+                            color: $dark-blue !important;
+
+                            .v-badge {
+                                &.customBadge {
+                                    .v-badge__wrapper {    
+                                        .v-badge__badge  {
+                                            background-color: $dark-blue !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .filters-wrapper {
+            border: 2px solid $light-border;
+            border-top: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 18px 20px;
+
+            #filters {
+                height: 40px;
+                box-shadow: none;
+                border: 1px solid $custom-border;
+                background-color: $white;
+                text-transform: capitalize;
+                letter-spacing: 0;
+                font-size: 14px;
+                width: 110px;
+                color: $custom-dark-blue !important;
+                font-weight: 600;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .shipment-table-wrapper {
+        .v-data-table {
+            box-shadow: none !important;
+            border-radius: 0;
+            border: 2px solid $white-to-blue;
+            border-top: none;
+            border-bottom: none;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+            .v-data-table__wrapper{
+                p {
+                    margin-bottom: 0 !important;
+                    font-size: 14px !important;
+                }
+
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                color: $grey;
+                                border-bottom: 1px solid $white-to-blue !important;
+                                padding: 11px 20px;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            cursor: pointer;
+
+                            &:hover {
+                                background-color: $table-hover-background !important;
+
+                                .status {
+                                    .v-chip {
+                                        background-color: $white !important;
+                                    }
+                                }
+                                
+                            }
+
+                            td {
+                                font-size: 14px !important;
+                                color: $default-text-color;
+                                font-weight: 400;
+                                padding: 12px 20px;
+                                border-bottom: 2px solid $light-white !important;
+
+                                .supplier-desktop,
+                                .po-num-desktop p { 
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                .status {
+                                    .v-chip {
+                                        padding: 6px 8px !important;
+                                        border-radius: 99px !important;
+                                        font-size: 12px !important;
+                                        background-color: $light-white !important;
+                                        color: $default-text-color !important;
+                                        margin-bottom: 0 !important;
+
+                                        .chip-text {
+                                            text-transform: capitalize;
+                                            font-family: 'Inter-Medium', sans-serif !important;
+                                            color: $default-text-color;
+
+                                            span {
+                                                font-family: 'Inter-Medium', sans-serif !important;
+                                            }
+
+                                            &.green--text {
+                                                color: #16B442 !important;
+                                            }
+                                        }
+                                        
+                                        .v-chip__content {
+                                            font-family: 'Inter-Medium', sans-serif !important;
+                                            text-transform: capitalize;
+
+                                            span {
+                                                margin-left: 2px !important;
+                                            }
+                                        }
+                                    }                                    
+                                    
+                                    // &.Discharged,
+                                    &.Completed {
+                                        .v-chip {
+                                            background-color: #EBFAEF !important;
+                                        }
+                                    }
+
+                                    &.Past-day {
+                                        .v-chip {
+                                            background-color: $white !important;
+                                        }
+                                    }
+                                }
+                            }
+
+                            &.light-red {
+                                background-color: #FFF2F2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* No data */
+            &#table-no-data {
+                border-bottom: 2px solid $white-to-blue;
+                
+                .v-data-table__wrapper {
+                    table {
+                        thead {
+                            display: none;
+                        }
+
+                        tbody {
+                            tr {
+                                &.v-data-table__empty-wrapper {
+                                    cursor: unset;
+
+                                    &:hover {
+                                        background-color: $white !important;
+                                    }
+
+                                    td {
+                                        border-bottom: none !important;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 100%;
+
+                                        .no-data-preloader,
+                                        .no-data-wrapper {
+                                            height: calc(100vh - 230px);
+                                            padding-top: 30px;
+
+                                            .no-data-heading {
+                                                margin-top: 15px;
+
+                                                p {
+                                                    font-size: 20px;
+                                                    color: $default-text-color;
+                                                    font-family: 'Inter-Medium', sans-serif;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.red.lighten-5:hover {
+                                    background-color: #FFCDD2 !important;
+                                    border-color: #FFCDD2 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .containerMain {
+        #shipments_root {
+            flex-direction: column-reverse;            
+
+            .v-tabs {
+                &.customTab {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .v-tab {
+                        padding: 0 15px !important;
+                    }
+                }
+            }
+
+            .create-shipment-button {
+                width: 100%;
+                padding: 16px 16px 8px;
+
+                .custom-button {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerMain {
+        padding: 0;
+
+        #shipments_header {
+            #shipments_root {
+                .v-tabs {
+                    &.customTab {
+                        .v-slide-group__prev,
+                        .v-slide-group__next {
+                            display: none !important;
+                        }
+    
+                        .v-tab {
+                            font-size: 14px;
+                            padding: 0 18px !important;
+                        }
+                    }
+                }
+            }
+    
+            .filters-wrapper {
+                background-color: $light-white !important;
+                border-bottom: none;
+                border-top: 1px solid $white-to-blue;
+                padding: 18px 15px;
+            }
+        }
+
+        .shipment-table-wrapper {
+            .v-data-table {
+                &.table-mobile {
+                    background-color: $light-white !important;
+
+                    .v-data-table__wrapper {
+                        table {
+                            margin-bottom: 75px;
+                            padding: 0 15px;
+
+                            thead {
+                                display: none !important;
+                            }
+
+                            tbody {
+                                tr {
+                                    &.v-data-table__mobile-table-row {
+                                        td {
+                                            &.v-data-table__mobile-row {
+                                                padding: 8px 20px 16px;
+
+                                                .v-data-table__mobile-row__header {
+                                                    display: none !important;
+                                                }
+    
+                                                .v-data-table__mobile-row__cell {
+                                                    width: 100%;
+    
+                                                    .table-mobile-data {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        align-items: center;
+                                                    }                                                    
+    
+                                                    .mobile-reference {
+                                                        .mobile-reference-content {
+                                                            font-size: 16px;
+                                                            font-family: 'Inter-Bold', sans-serif;
+                                                        }
+
+                                                        .status-mobile {
+                                                            .v-chip {
+                                                                padding: 6px 8px !important;
+                                                                border-radius: 4px !important;
+                                                                font-size: 12px !important;
+                                                                background-color: $light-white !important;
+                                                                color: $default-text-color !important;
+                                                                font-weight: 800 !important;
+                                                                margin-bottom: 0 !important;
+
+                                                                .chip-text {
+                                                                    text-transform: capitalize;
+                                                                    color: $default-text-color;
+                                                        
+                                                                    &.green--text {
+                                                                        color: #16B442 !important;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            // &.Discharged,
+                                                            &.Completed {
+                                                                .v-chip {
+                                                                    background-color: #EBFAEF !important;
+                                                                }
+                                                            }
+
+                                                            &.Past-day {
+                                                                .v-chip {
+                                                                    // background-color: $white !important;
+                                                                    background-color: #FFF2F2 !important;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .mobile-supplier {
+                                                        display: flex;
+                                                        justify-content: flex-start;
+                                                        align-items: flex-start;
+                                                        padding-bottom: 0;
+
+                                                        .mobile-supplier-content {
+                                                            width: 100%;
+
+                                                            p {
+                                                                font-size: 12px;
+                                                                color: $default-text-color !important;
+                                                                text-align: left !important;
+                                                                max-width: 70vw;
+                                                                white-space: nowrap;
+                                                                overflow: hidden;
+                                                                text-overflow: ellipsis;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .mobile-pos {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        align-items: center;
+
+                                                        p {
+                                                            margin: 0 !important;
+                                                            font-size: 12px;
+                                                            color: $grey !important;
+                                                            text-align: left;
+                                                            max-width: 75vw;
+                                                            white-space: nowrap;
+                                                            overflow: hidden;
+                                                            text-overflow: ellipsis;
+
+                                                            span {
+                                                                color: $default-text-color !important;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    .mobile-cargo-date {
+                                                        display: flex;
+                                                        justify-content: flex-start;
+                                                        align-items: center;
+
+                                                        p {
+                                                            color: #819fb2 !important;
+                                                            margin-bottom: 0;
+
+                                                            span {
+                                                                color: #4A4A4A !important;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &:nth-child(1) {
+                                                    border-top-left-radius: 4px;
+                                                    border-top-right-radius: 4px;
+                                                    border: 2px solid $white-to-blue !important;
+                                                    border-bottom: none !important;
+                                                    padding-bottom: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    td {
+                                        background-color: $white !important;
+                                        border: none !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    /* For Shipments and Completed Tab */
+                    &.shipments-table-mobile {
+                        table {
+                            tbody {
+                                td {
+                                    &.v-data-table__mobile-row {
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            border: 2px solid #E1ECF0 !important;
+                                            border-bottom: none !important;
+                                            border-top: none !important;
+                                            padding-bottom: 0 !important;
+                                            padding-top: 12px !important;
+
+                                        }
+
+                                        &:nth-child(4) {
+                                            margin-bottom: 10px;
+                                            border-bottom-left-radius: 4px;
+                                            border-bottom-right-radius: 4px;
+                                            border: 2px solid #E1ECF0 !important;
+                                            border-top: none !important;
+                                        }
+
+                                        /* Hide 5 onwards td's in mobile */
+                                        &:nth-child(1n+5) {
+                                            display: none;
+                                        }
+                                    } 
+                                }
+                            }
+                        }
+                    }
+
+                    /* For Pending Tab */
+                    &.pending-header-mobile {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        &:nth-child(1n+5) {
+                                            display: none;
+                                        }
+                                        
+                                        &:nth-child(2),
+                                        &:nth-child(3) {
+                                            border: 1px solid #E1ECF0 !important;
+                                            border-bottom: none !important;
+                                            border-top: none !important;
+                                            padding-bottom: 0 !important;
+                                            min-height: 35px;
+                                        } 
+
+                                        &:nth-child(4) {
+                                            margin-bottom: 10px;
+                                            border-bottom-left-radius: 4px;
+                                            border-bottom-right-radius: 4px;
+                                            border: 1px solid $white-to-blue !important;
+                                            border-top: none !important;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                /* No data */
+                &#table-no-data {
+                    .v-data-table__wrapper {
+                        table {
+                            padding: 0 !important;
+                            margin-bottom: 0 !important;
+    
+                            tbody {
+                                tr {
+                                    &.v-data-table__empty-wrapper {    
+                                        td {    
+                                            .no-data-preloader,
+                                            .no-data-wrapper {
+                                                height: calc(100vh - 180px) !important;
+                                                padding-top: 150px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .pagination-wrapper {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

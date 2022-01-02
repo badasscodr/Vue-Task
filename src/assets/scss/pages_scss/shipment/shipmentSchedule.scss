@@ -1,0 +1,195 @@
+@import '../../colors.scss';
+
+.shipment-info {
+    .cont-fluid-wrapper {
+        padding: 20px 20px 10px !important;
+
+        .heading-place,
+        .heading-content {
+            margin: 0 !important;
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .no-data-preloader {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100px;
+        }
+    }
+
+    &.schedule-options {
+        .schedule-title {
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .customCard {
+            border: 1px solid $white-to-blue;
+            border-radius: 4px;
+            margin: 10px 0 0;
+            box-shadow: none !important;
+            min-height: 100px;
+            margin-bottom: 10px;
+            padding: 12px;
+
+            .option-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+
+                .schedule-name {
+                    color: $dark-blue;
+                    font-size: 14px;
+                }
+
+                .selected-status {
+                    font-size: 11px;
+                    color: $green;
+                    padding: 3px 8px;
+                    margin-left: 10px;
+                    border: 1px solid $green;
+                    border-radius: 20px;
+                    font-family: 'Inter-Medium', sans-serif;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .schedule-info,
+            .schedule-info-prices {
+                margin-top: 8px;
+
+                .schedule-heading {
+                    color: $grey;
+                    font-size: 10px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin-bottom: 3px !important;
+                }
+
+                .schedule-data {
+                    font-size: 12px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .schedule-info-prices {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .total {
+                    font-size: 12px;
+                    color: $default-text-color;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    text-transform: uppercase;
+                    margin-bottom: 0;
+                }
+
+                .schedule-data {
+                    margin-bottom: 3px !important;
+                }
+            }
+
+            .shipment-choose {
+                .option-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 6px;
+                    width: 100%;
+
+                    .selected-status {
+                        font-size: 11px;
+                        color: $yellow;
+                        padding: 3px 8px;
+                        margin-left: 10px;
+                        border: 1px solid $yellow;
+                        border-radius: 20px;
+                        font-family: 'Inter-Medium', sans-serif;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+                .schedule-info-button {
+                    display: flex;
+                    justify-content: flex-end;
+                    width: 100%;
+
+                    .choose-this {
+                        background-color: $dark-blue !important;
+                        color: $white;
+                        padding: 8px 12px;
+                        font-size: 12px;
+                        border-radius: 4px;
+                        margin-top: 10px;
+                        letter-spacing: 0;
+                        text-transform: capitalize;
+                        box-shadow: none !important;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .shipment-info-divider {
+        border-color: $white-to-blue !important;
+        margin: 12px 0 4px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-info {
+        &.schedule-options {
+            .customCard {
+                .schedule-col {
+                    margin-bottom: 25px;
+                }
+
+                .schedule-info {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .schedule-heading {
+                        margin-bottom: 0 !important;
+                        width: 95px;
+                    }
+                }
+
+                .schedule-info-prices {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    .schedule-heading {
+                        margin-bottom: 0 !important;
+                        width: 128px;
+                    }
+                }
+
+                .schedule-data {
+                    margin-bottom: 0 !important;
+                }
+
+                .shipment-choose {
+                    .schedule-info-button {
+                        button {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

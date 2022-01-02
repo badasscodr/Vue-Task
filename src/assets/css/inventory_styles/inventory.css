@@ -1,0 +1,148 @@
+.inventory-body-container-wrapper {
+	padding: 24px;
+	font-family: 'Inter-Regular', sans-serif;
+	height: 100%;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper {
+	height: 100%;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-header {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-bottom: 20px;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-header h2 {
+	color: #4a4a4a;
+	font-size: 24px;
+	font-family: 'Inter-Regular', sans-serif;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .btn-blue {
+	background-color: #0171A1 !important;
+	color: #fff;
+	letter-spacing: 0;
+	padding: 10px 16px !important;
+	text-transform: capitalize !important;
+	font-size: 14px;
+	height: 40px !important;
+	box-shadow: none !important;
+	min-width: 130px !important;
+	font-family: 'Inter-Medium', sans-serif;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .btn-blue:disabled {
+	background-color: #0171A1 !important;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .btn-white {
+	border: 1px solid #B4CFE0 !important;
+	background-color: #fff !important;
+	letter-spacing: 0;
+	padding: 10px !important;
+	text-transform: capitalize !important;
+	font-size: 14px;
+	height: 40px;
+	box-shadow: none !important;
+	margin-right: 8px;
+	min-width: 40px;
+	color: #0171A1 !important;
+	font-family: 'Inter-Regular', sans-serif;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .btn-white.btn-add-warehouse {
+	padding: 10px 16px !important;
+	font-family: 'Inter-Regular', sans-serif;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper {
+	background-color: #fff;
+	border: 1px solid #E1ECF0;
+    border-radius: 4px;
+	/* min-height: 300px; */
+	height: calc(100vh - 175px);
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body {
+	display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+	/* min-height: 500px; */
+    width: 100%;
+	height: 100%;
+}
+
+/* No warehouses */
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body-load,
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body.no-data {
+	min-height: 530px;
+    display: flex;
+    justify-content: center;
+    padding-top: 55px;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body.no-data .no-data-heading {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body.no-data .no-data-heading h3 {
+	margin: 10px 0;
+    font-size: 20px;
+    color: #4a4a4a;
+}
+
+.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body.no-data .no-data-heading p {
+	text-align: center;
+	font-size: 14px;
+	color: #4a4a4a;
+	margin-bottom: 0;
+}
+
+/* end of css no warehouse */
+
+.v-list.warehouse-lists-items {
+	width: 140px !important;
+}
+
+.v-list.warehouse-lists-items .v-list-item {
+	min-height: 40px !important;
+}
+
+.v-list.warehouse-lists-items .v-list-item .v-list-item__title {
+	display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+	font-family: 'Inter-Regular', sans-serif;
+}
+
+.v-list.warehouse-lists-items .v-list-item:hover {
+	background-color: #f7f7f7 !important;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+	.inventory-body-container-wrapper {
+		padding: 0;
+	}
+
+	.inventory-body-container-wrapper .inventory-content-wrapper .inventory-header {
+		padding: 16px;
+		margin-bottom: 0;
+	}
+
+	.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body,
+	.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body .warehouse-lists-wrapper {
+		min-height: unset;
+		width: 100%;
+	}
+
+	.inventory-body-container-wrapper .inventory-content-wrapper .inventory-body-wrapper .inventory-body .warehouse-lists-wrapper .warehouse-body-lists {
+		max-height: calc(100vh - 280px) !important;
+	}
+}

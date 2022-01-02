@@ -1,0 +1,299 @@
+@import '../../colors.scss';
+
+.supplier-container {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+    height: 100%;
+
+    .supplier-content-wrapper {
+        height: 100%;
+
+        .v-data-table {
+            .v-toolbar {
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+    
+                .v-toolbar__content {
+                    border-bottom: 2px solid $custom-shipment-border;
+    
+                    .v-toolbar__title {
+                        font-size: 20px;
+                        font-family: 'Inter-SemiBold', sans-serif;
+                        color: $default-text-color;
+                    }
+    
+                    .search-component-wrapper {
+                        margin-right: 15px;
+                    }
+                }
+            }
+    
+            &.suppliers-table {
+                border: 1px solid $table-border;
+                border-radius: 0;
+                border-top-right-radius: 4px;
+                border-top-left-radius: 4px;
+                border-bottom: none !important;;
+                box-shadow: none !important;
+    
+                .v-data-table__wrapper {
+                    max-height: calc(100vh - 235px);
+                    overflow-y: auto;
+                    overflow-x: hidden;
+    
+                    table {
+                        table-layout: fixed;
+    
+                        thead  {
+                            tr {
+                                th {
+                                    color: $grey;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                    font-family: 'Inter-Regular', sans-serif;
+                                    padding: 11px 20px;
+                                }
+                            }
+                        }
+    
+                        tbody {
+                            tr {
+                                &:hover {
+                                    background-color: $table-hover-background !important;
+                                }
+    
+                                td {
+                                    padding: 15px 20px;
+                                    color: $default-text-color;
+                                    cursor: pointer;
+                                    border-bottom: 1px solid $light-border !important;
+                                    font-size: 14px !important;
+    
+                                    p {
+                                        font-size: 14px !important;
+                                    }
+    
+                                    .email-wrapper {
+                                        .email-container {
+                                            flex: 1 1 100%;
+                                            min-width: 0;
+    
+                                            p {
+                                                text-overflow: ellipsis;
+                                                white-space: nowrap;
+                                                overflow: hidden;
+                                            }
+                                        }
+                                    }
+    
+                                    .item-button {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        color: $dark-blue;
+                                        cursor: pointer;
+    
+                                        img {
+                                            margin-right: 10px;
+                                        }
+                                    }                                
+                                }
+                            }
+                        }
+                    }
+    
+                    /* Scrollbar */
+                    &::-webkit-scrollbar {
+                        width: 10px;
+                    }
+                    
+                    /* Track */
+                    &::-webkit-scrollbar-track {
+                        background: #f1f1f1; 
+                    }
+                    
+                    /* Handle */
+                    &::-webkit-scrollbar-thumb {
+                        background: #d3d3d3; 
+                    }
+                    
+                    /* Handle on hover */
+                    &::-webkit-scrollbar-thumb:hover {
+                        background: #d3d3d3; 
+                    }
+                }
+    
+                &.no-data-table {
+                    .v-data-table__wrapper {
+                        table {
+                            thead {
+                                display: none;
+                            }
+    
+                            tbody {
+                                tr {
+                                    &:hover {
+                                        background-color: $white !important;
+                                    }
+                                }
+                                .no-data-wrapper,
+                                .no-data-preloader {
+                                    height: calc(100vh - 300px);
+                                }
+    
+                                .no-data-wrapper {
+                                    .no-data-heading {
+                                        padding-top: 30px;
+                                    }
+    
+                                    img {
+                                        margin-bottom: 10px;
+                                    }
+    
+                                    h3 {
+                                        font-size: 20px;
+                                        margin-bottom: 10px;
+                                    }
+                                    
+                                    p {
+                                        font-size: 14px;
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .supplier-container {
+        padding: 0;
+
+        .v-data-table {
+            &.suppliers-table-mobile {
+                box-shadow: none !important;        
+                background-color: $light-white !important;
+
+                .v-toolbar {
+                    background-color: $light-white !important;
+                    height: 72px !important;
+
+                    .v-toolbar__content {
+                        height: 72px !important;
+
+                        .v-toolbar__title {
+                            font-size: 20px;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                            color: $default-text-color;
+                        }
+                    }
+                }
+
+                .search-component {
+                    width: 100%;
+                    padding: 16px;        
+                    border-bottom: 2px solid $light-white;
+                    background-color: $white !important;
+
+                    .search-component-wrapper {
+                        .v-input {
+                            .v-input__control {
+                                .v-input__slot {
+                                    width: 100% !important;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .v-data-table__wrapper {
+                    max-height: calc(100vh - 270px);
+                    overflow-y: auto;
+                    overflow-x: hidden;
+
+                    table {
+                        background-color: $white;
+                        margin-bottom: 0;
+
+                        thead {
+                            display: none;
+                        }
+
+                        tbody {
+                            .v-data-table__mobile-row {
+                                border: none !important;
+                            }
+
+                            td {
+                                &.v-data-table__mobile-row {
+                                    &:nth-child(1n+3) {
+                                        border-bottom: 2px solid $light-white !important;
+                                    }
+
+                                    &:nth-child(1n+4) {
+                                        display: none;
+                                    }
+                                }
+
+                                .v-data-table__mobile-row__header {
+                                    display: none;
+                                }
+
+                                .v-data-table__mobile-row__cell {
+                                    width: 100%;
+
+                                    .supplier-row {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        align-items: center;
+
+                                        .p-gray {
+                                            text-align: start !important;
+                                            color: $dark-grey !important;
+                                        }
+                                    }
+
+                                    .email-mobile {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: flex-start;
+                                    }
+
+                                    .item-button {
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        color: $dark-blue;
+                                        cursor: pointer;
+
+                                        img {
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+            
+    /* Dialog */
+    .v-dialog {
+        &.add-supplier-dialog {
+            margin: 0;
+            height: 100%;
+            max-height: 100%;
+            background-color: $white;
+
+            .add-supplier-card {
+                box-shadow: none;
+            }
+        }
+    }
+}

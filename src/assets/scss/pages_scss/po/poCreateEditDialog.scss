@@ -1,0 +1,584 @@
+@import '../../colors.scss';
+
+.v-dialog {
+    &.po-dialog {
+        .v-card__text {
+            padding: 0 !important;
+
+            .create-wrapper {
+                display: flex;
+                min-height: 376px;
+
+                .po-info {
+                    width: 30%;
+                    background-color: $table-hover-background;
+                    padding: 16px 24px 24px;
+
+                    .custom-wrapper {
+                        position: relative;
+                        margin-left: 30px;
+
+                        img {
+                            position: absolute;
+                            top: 15px;
+                            left: 12px;
+                            z-index: 10;
+                        }
+
+                        .v-input {
+                            &.text-fields.custom {
+                                .v-input__control {
+                                    .v-input__slot {
+                                        background-color: $white;
+
+                                        input {
+                                            padding-left: 25px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                .product-info {
+                    padding: 16px 24px;
+                    width: 70%;
+
+                    .v-data-table {
+                        box-shadow: none !important;
+
+                        .v-data-table__wrapper {
+                            table {
+                                table-layout: fixed;
+
+                                thead {
+                                    background-color: $table-hover-background;
+
+                                    tr {
+                                        th {
+                                            font-size: 12px;
+                                            color: $dark-grey !important;
+                                            text-transform: uppercase;
+                                            border: none !important;
+                                            padding: 11px !important;
+                                        }
+                                    }
+                                }
+
+                                tbody {
+                                    tr {
+                                        &:hover {
+                                            background-color: $white !important;
+                                        }
+
+                                        td {
+                                            padding: 8px 8px 8px 0px;
+                                            border-bottom: 2px solid $light-border !important;
+
+                                            .v-input {
+                                                &.select-product {
+                                                    background-color: $white !important;
+            
+                                                    .v-input__control {
+                                                        height: auto;
+            
+                                                        .v-input__slot {
+                                                            margin-bottom: 0;
+            
+                                                            fieldset {
+                                                                min-height: 50px;
+                                                                border: 1px solid $light-grey;
+                                                            }
+            
+                                                            .v-select__slot {
+                                                                height: auto;
+            
+                                                                .v-input__append-inner {
+                                                                    margin-top: 11px;
+        
+                                                                    i {
+                                                                        color: $dark-blue;
+                                                                    }
+                                                                }
+        
+                                                                .v-select__selections {
+                                                                    font-size: 14px;
+                                                                    padding: 4px 0 !important;
+                                                                    line-height: 20px;
+                                                                    
+                                                                    .v-select__selection {
+                                                                        &.v-select__selection--comma {
+                                                                            margin: 0 4px 0 0;
+                                                                        }
+                                                                    }
+        
+                                                                    input {
+                                                                        font-size: 14px;
+                                                                        padding: 8px 0 !important;
+                                                                        line-height: 20px;
+        
+                                                                        &::placeholder {
+                                                                            color: $light-grey;
+                                                                        }
+                                                                    }                                                           
+                                                                }
+                                                                
+                                                            }
+                                                        }
+
+                                                        .v-text-field__details {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+        
+                                                &.table-text-fields {
+                                                    .v-input__control {
+                                                        height: auto;
+        
+                                                        .v-input__slot {
+                                                            margin-bottom: 0;
+        
+                                                            .v-text-field__slot {
+                                                                height: auto;
+        
+                                                                input {
+                                                                    font-size: 14px;
+                                                                    text-align: right;
+        
+                                                                    &::placeholder {
+                                                                        color: $light-grey;
+                                                                    }
+                                                                }                                                       
+                                                            }
+        
+                                                            fieldset {
+                                                                min-height: 50px;
+                                                                border: 1px solid $light-grey;
+                                                            }
+                                                        }
+
+                                                        .v-text-field__details {
+                                                            display: none;
+                                                        }
+                                                    }
+        
+                                                    &.amount {
+                                                        .v-input__control {
+                                                            .v-input__slot {
+                                                                padding: 0;
+        
+                                                                fieldset {
+                                                                    border: none !important;
+                                                                    color: $default-text-color;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                .v-text-field__details {
+                                                    display: block;
+                                                }
+                                            }
+
+                                            .remove-btn {
+                                                width: auto !important;
+                                                height: auto !important;
+
+                                                span,
+                                                span i {
+                                                    color: $dark-red !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .add-row-wrapper {
+                        padding: 10px 0;
+                        border-bottom: 2px solid $light-border;
+
+                        .add-btn {
+                            margin-bottom: 0 !important;
+                            text-transform: capitalize;
+                            letter-spacing: 0;
+                            padding: 8px 16px;
+                            font-size: 14px;
+                            height: 40px;
+                            color: $dark-blue;
+                            box-shadow: none;
+                            border: 1px solid $custom-border !important;
+                            border-radius: 4px;
+                            font-family: 'Inter-Medium', sans-serif;
+                        }
+                    }
+
+                    .total-wrapper {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        .view-total {
+                            width: 40%;
+
+                            .view-prices {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                color: $default-text-color;
+                                padding: 10px;
+                                border-bottom: 2px solid #E5EEF1;
+
+                                p {
+                                    margin-bottom: 0;
+
+                                    &:first-child {
+                                        text-align: right;
+                                        width: 35%;
+                                    }                                    
+                                }
+
+                                &.subtotal {
+                                    p {
+                                        font-family: 'Inter-Medium', sans-serif;
+                                    }
+                                }
+
+                                &.total {
+                                    border-bottom: 0 !important;
+
+                                    p {
+                                        font-family: 'Inter-SemiBold', sans-serif;
+                                    }
+                                }
+                                
+                            }
+                        }
+                    }
+                    
+                }
+
+                .po-title {
+                    font-size: 10px;
+                    color: $grey;
+                    text-transform: uppercase;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    margin-bottom: 0 !important;
+                }
+
+                .v-input {
+                    margin-top: 0 !important;
+
+                    .v-input__control {
+                        background-color: transparent !important;
+
+                        .v-input__slot {
+                            .v-radio {
+                                label {
+                                    font-size: 14px;
+                                    color: $default-text-color;
+                                    font-family: 'Inter-Regular', sans-serif;
+                                }
+                            }
+
+                            input,
+                            textarea {
+                                &::placeholder {
+                                    color: $light-grey;
+                                }
+                            }
+                        }
+                    }
+
+                    &.note {
+                        .v-input__control {
+                            .v-input__slot {
+                                fieldset {
+                                    height: 136px;
+                                    border: 1px solid $light-grey;
+                                    background-color: $white !important;
+                                }
+
+                                .v-text-field__slot {
+                                    textarea {
+                                        height: 130px;
+                                        font-size: 14px;
+                                        line-height: 20px;
+                                        padding: 8px 8px 8px 0;
+                                        margin: 0 !important;
+
+                                        &::placeholder {
+                                            color: $light-grey;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &.select-items {
+                        background-color: $table-hover-background !important;
+
+                        .v-input__control {
+                            .v-input__slot {
+                                min-height: 50px !important;
+
+                                .v-select__slot {
+                                    height: auto;
+
+                                    .v-select__selections {
+                                        font-size: 14px;
+                                        padding: 4px 0 !important;
+                                        line-height: 20px;
+
+                                        .v-select__selection {
+                                            max-width: 95% !important;
+
+                                            &.v-select__selection--comma {
+                                                margin: 4px 4px 4px 0 !important;
+                                                overflow: unset;
+                                                text-overflow: unset;
+                                                white-space: unset;
+                                            }
+                                        }
+
+                                        input {
+                                            font-size: 14px;
+                                            padding: 4px 0 !important;
+                                            line-height: 20px;
+
+                                            &::placeholder {
+                                                color: $light-grey;
+                                            }
+                                        }
+                                    }
+                                }
+
+                                fieldset {
+                                    min-height: 50px;
+                                    border: 1px solid $light-grey;
+                                    background-color: $white !important;
+                                }
+
+                                .v-input__append-inner {
+                                    i {
+                                        color: $dark-blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .v-card__actions {
+            &.po-button-actions {
+                button {
+                    margin-right: 8px;
+
+                    &.has-empty {
+                        opacity: 0.4;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.v-menu__content {
+    .v-list {
+        &.v-select-list {
+            .v-list-item.v-list-item--link {
+                .v-list-item__content {
+                    .v-list-item__title {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.product-lists-items {
+        width: 300px !important;
+
+        .v-list {
+            padding: 0;
+
+            .v-list-item {
+                border-bottom: 2px solid $light-white;
+
+                .option-items {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                    padding: 16px 0px;
+
+                    .sku-item {
+                        width: 75%;
+
+                        span {
+                            color: $default-text-color;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                            font-size: 14px;
+                            display: flex;
+                            align-items: center;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            margin-bottom: 0;
+                            margin-top: 8px;
+                        }
+                        
+
+                        .sku-details {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                        }
+                    }
+
+                    .image-item {
+                        width: 25%;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: flex-start;
+
+                        img {
+                            border: 1px solid $light-border;
+                            border-radius: 4px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .v-dialog {
+        &.po-dialog {
+            .v-card__text {
+                .create-wrapper {
+                    flex-direction: column;
+
+                    .po-info,
+                    .product-info {
+                        width: 100%;
+                        padding: 16px;
+                    }
+
+                    .product-info {
+                        .v-data-table {
+                            .v-data-table__wrapper {
+                                table {
+                                    table-layout: unset !important;
+    
+                                    thead {
+                                        display: none;
+                                    }
+    
+                                    tbody {
+                                        tr {
+                                            td {
+                                                padding: 8px 0 !important;
+                                                border: none !important;
+
+                                                .v-data-table__mobile-row__cell {
+                                                    .product-mobile-header {
+                                                        .po-create-product-title {
+                                                            margin-bottom: 0 !important;
+                                                            color: $dark-grey;
+                                                            font-family: 'Inter-SemiBold', sans-serif;
+                                                            text-transform: uppercase;
+                                                            margin-right: 8px;
+                                                        }
+                                                    }
+                                                }
+    
+                                                &:first-child {
+                                                    display: flex;
+                                                    justify-content: flex-start;
+                                                    align-items: flex-start;
+                                                    flex-direction: column;
+                                                    width: 100%;
+    
+                                                    .v-data-table__mobile-row__header {
+                                                        display: none;
+                                                    }
+    
+                                                    .v-data-table__mobile-row__cell {
+                                                        width: 100%; 
+                                                    }
+                                                } 
+                                                
+                                                &:last-child {
+                                                    display: none;
+                                                }
+    
+                                                &:nth-child(4) {
+                                                    border-bottom: 2px solid #ECF3F5 !important;
+                                                }
+    
+                                                .v-data-table__mobile-row__header {
+                                                    color: $dark-grey;
+                                                    font-family: 'Inter-SemiBold', sans-serif;
+                                                    text-transform: uppercase;
+                                                    margin-right: 8px;
+                                                    font-weight: normal;
+                                                }
+    
+                                                .mobile-desc {
+                                                    .mobile-header {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        align-items: center;
+                                                        margin-bottom: 10px;
+    
+                                                        .header-title {
+                                                            font-size: 12px;
+                                                            text-transform: uppercase;
+                                                            color: $dark-grey;
+                                                            font-weight: 700;
+                                                        }
+                                                    }
+                                                }
+    
+                                                .remove-btn {
+                                                    width: 36px !important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .add-row-wrapper {
+                            padding: 15px 0;
+
+                            .add-btn {
+                                width: 100%;
+                            }
+                        }
+
+                        .total-wrapper {
+                            .view-total {
+                                width: 75%;
+                            }   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

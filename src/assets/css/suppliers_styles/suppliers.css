@@ -1,0 +1,275 @@
+.supplier-container {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.supplier-container .v-data-table.suppliers-table {
+    border: 1px solid #D2E3ED;
+    border-radius: 0;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    box-shadow: none !important;
+}
+
+.supplier-container .suppliers-table .v-toolbar {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.supplier-container .suppliers-table .v-toolbar__content {
+    border-bottom: 2px solid #E2EDF3;
+}
+
+.supplier-container .suppliers-table .v-toolbar__content .v-toolbar__title {
+    font-size: 20px;
+    font-family: 'Inter-SemiBold', sans-serif;
+    color: #4a4a4a;
+}
+
+.supplier-container .suppliers-table .v-toolbar__content .search-component-wrapper {
+    margin-right: 15px;
+}
+
+.supplier-container .suppliers-table .add-supplier {
+    height: 40px !important;
+    margin-bottom: 0 !important;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    background-color: #0171A1 !important;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: none !important;
+}
+
+/* TABLE */
+.supplier-container .suppliers-table .v-data-table__wrapper table {
+    table-layout: fixed;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table .v-data-table-header tr th {
+    color: #819FB2;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Inter-Regular', sans-serif;
+    padding: 11px 20px;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr:hover {
+    background-color: #F7F7F7 !important;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td {
+    padding: 15px 20px;
+    color: #4a4a4a;
+    cursor: pointer;
+    border-bottom: 1px solid #E1ECF0 !important;
+    font-size: 14px !important;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td .email-wrapper .email-container {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td .email-wrapper .email-container p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td p {
+    font-size: 14px !important;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td .item-button {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #0171A1;
+    cursor: pointer;
+}
+
+.supplier-container .suppliers-table .v-data-table__wrapper table tbody tr td .item-button img {
+    margin-right: 10px;
+}
+
+/* no data table */
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table thead {
+    display: none;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody .no-data-wrapper,
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody .no-data-preloader {
+    min-height: 530px;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody tr:hover {
+    background-color: #fff !important;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody .no-data-wrapper .no-data-heading {
+    padding-top: 30px;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody tr td .no-data-wrapper img {
+	margin-bottom: 10px;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody tr td .no-data-wrapper h3 {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+.supplier-container .suppliers-table.no-data-table .v-data-table__wrapper table tbody tr td .no-data-wrapper p {
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .supplier-container {
+        padding: 0;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-toolbar {
+        background-color: #F1F6FA !important;
+        height: 72px !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-toolbar__content {
+        height: 72px !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-toolbar__content .v-toolbar__title {
+        font-size: 20px;
+        font-family: 'Inter-SemiBold', sans-serif;
+        color: #4a4a4a;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-toolbar__content .add-supplier {
+        height: 40px !important;
+        margin-bottom: 0 !important;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        background-color: #0171A1 !important;
+        font-size: 14px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        box-shadow: none !important;
+    }
+    
+    /* Search */
+    .supplier-container .suppliers-table-mobile .search-component {
+        width: 100%;
+        padding: 16px;        
+        border-bottom: 2px solid #F1F6FA;
+        background-color: #fff !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .search-component-wrapper .v-input .v-input__control .v-input__slot {
+        width: 100% !important;
+    }
+    
+    /* TABLE MOBILE */
+    .supplier-container .suppliers-table-mobile {
+        box-shadow: none !important;        
+        background-color: #f1f6fa !important;
+    }
+
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper {
+        max-height: calc(100vh - 270px);
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table {
+        background-color: #FFFFFF;
+        margin-bottom: 0;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table thead {
+        display: none;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row {
+        border: none !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+3) {
+        border-bottom: 2px solid #F1F6FA !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+4) {
+        display: none;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row__header {
+        display: none;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row__cell {
+        width: 100%;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row__cell .supplier-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row__cell .supplier-row .p-gray {
+        text-align: start !important;
+        color: #6D858F !important;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody .v-data-table__mobile-row__cell .email-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody tr td .item-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #0171A1;
+        cursor: pointer;
+    }
+    
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper table tbody tr td .item-button img {
+        margin-right: 8px;
+    }
+    
+    /* Dialog */
+    .v-dialog.add-supplier-dialog {
+        margin: 0;
+        height: 100%;
+        max-height: 100%;
+        background-color: #fff;
+    }
+    
+    .v-dialog.add-supplier-dialog .add-supplier-card {
+        box-shadow: none;
+    }
+
+    /* Scrollbar */
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    
+    /* Handle */
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper::-webkit-scrollbar-thumb {
+        background: #d3d3d3; 
+    }
+    
+    /* Handle on hover */
+    .supplier-container .suppliers-table-mobile .v-data-table__wrapper::-webkit-scrollbar-thumb:hover {
+        background: #d3d3d3; 
+    }
+}
+

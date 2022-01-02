@@ -1,0 +1,125 @@
+@import '../../colors.scss';
+
+.make-payment-dialog {
+    .v-card {
+        .v-card__text {
+            min-height: 300px;
+            padding: 24px;
+
+            .make-payment-wrapper {
+                .make-payment-info {
+                    .card-name {
+                        .card-title {
+                            color: $grey;
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                            margin-bottom: 3px;
+                        }
+                    }
+
+                    .row-inline {
+                        .card-name {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            
+                            .card-title {
+                                width: 35%;
+                                margin-bottom: 0;
+                            }
+
+                            span {
+                                font-size: 12px;
+                                color: $default-text-color;
+
+                                &.amount {
+                                    font-size: 16px;
+                                    font-family: 'Inter-SemiBold', sans-serif;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .col {
+                        padding-bottom: 0 !important;
+                        padding-top: 5px;
+                    }
+
+                    .divider {
+                        height: 1px;
+                        background-color: $divider-bg;
+                        width: 100%;
+                        margin: 20px 0;
+                    }
+                }
+
+                .v-input {       
+                    font-size: 14px;
+                    color: $default-text-color;
+
+                    .v-input__control {
+                        background-color: $white;
+                    }
+
+                    .v-text-field__details {
+                        display: block;
+                        margin-bottom: 0;
+                    }
+                }                
+            }
+        }
+
+        .v-card__actions {
+            button {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .make-payment-dialog {
+        margin: 0 !important;
+        height: 100%;
+        max-height: 100% !important;
+        background-color: #fff;
+
+        .v-card {
+            box-shadow: none !important;
+            
+            .v-card__text {
+                margin-bottom: 20px !important;
+
+                .make-payment-wrapper {
+                    .make-payment-info {
+                        .card-name {
+                            .card-title {
+                                font-size: 12px;
+                            }
+                        }
+    
+                        .row-inline {
+                            .card-name {                                
+                                .card-title {
+                                    width: 30%;
+                                }
+    
+                                span {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }              
+                }
+            }
+
+            .v-card__actions {
+                position: fixed;
+                width: 100%;
+                bottom: -1px;
+                padding: 8px;
+            }
+        }
+    }
+}

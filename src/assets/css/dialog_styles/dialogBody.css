@@ -1,0 +1,13 @@
+.v-dialog .v-card .v-card__text {
+    background-color: #fff;
+}
+
+.v-dialog .v-card .v-card__text .v-input .v-input__control {
+    background-color: transparent !important;
+}
+
+@media screen and (max-width: 767px) {
+    .v-dialog .v-card .v-card__text {
+        margin-bottom: 65px;
+    }
+}

@@ -1,0 +1,334 @@
+.shipment-info .cont-fluid-wrapper {
+    padding: 20px 20px 10px !important;
+}
+
+.shipment-info .shipment-info-divider {
+    border-color: #E1ECF0 !important;
+    margin: 12px 0 4px;
+}
+
+.shipment-info .cont-fluid-wrapper .shipment-info-wrapper {
+    padding: 10px;
+}
+
+.shipment-info .cont-fluid-wrapper .shipment-info-wrapper .building-name {
+    color: #4A4A4A;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.shipment-info .cont-fluid-wrapper .shipment-info-content {
+    padding: 0 12px 10px 0;
+}
+
+.shipment-info .cont-fluid-wrapper .heading.shipment-info-content {
+    width: 95px;
+    /* width: 130px; */
+    color: #819FB2;
+    text-transform: uppercase;
+    font-family: 'Inter-SemiBold', sans-serif !important;
+    font-size: 12px;
+    padding-right: 0 !important;
+}
+
+.shipment-info .cont-fluid-wrapper p.shipment-info-content {
+    font-size: 14px;
+    margin-bottom: 0;
+    /* padding-right: 0; */
+}
+
+.shipment-info .cont-fluid-wrapper p.shipment-info-content .heading-date {
+    margin: 0 !important;
+    color: #0171A1 !important;
+    font-family: 'Inter-Regular', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* SUPPLIERS */
+.shipment-info .cont-fluid-wrapper .supplier-title {
+    color: #4A4A4A;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard {
+    border: 1px solid #e1ecf0;
+    border-radius: 4px;
+    margin: 10px 0 0;
+    box-shadow: none !important;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard .container-wrapper {
+    padding: 20px;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard .container-wrapper .supplier-name {
+    font-size: 14px;
+    font-family: 'Inter-Medium', sans-serif;
+    color: #4A4A4A;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard .container-wrapper .supplier-desktop-row {
+    margin-top: 15px;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard .container-wrapper .supplier-desktop-row .supplier-col {
+    padding-top: 0;
+}
+
+.shipment-info .cont-fluid-wrapper .customCard .container-wrapper .po-wrapper .po-num-item {
+    font-size: 12px;
+    color: #6D858F;
+    padding: 4px 8px;
+    border: 1px solid #E1ECF0;
+    border-radius: 99px;
+    margin-right: 5px;
+}
+
+.shipment-info .cont-fluid-wrapper .heading-supplier {
+    color: #6D858F;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3px !important;
+}
+
+.shipment-info .cont-fluid-wrapper .heading-place,
+.shipment-info .cont-fluid-wrapper .heading-content {
+    margin: 0 !important;
+    color: #4A4A4A;
+    font-family: 'Inter-Regular', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shipment-info .cont-fluid-wrapper .heading-content {
+    font-size: 12px;
+}
+
+.shipment-info .cont-fluid-wrapper .heading-content-desc {
+    margin: 0 !important;
+    color: #4A4A4A;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.shipment-info .ribbon {
+    background: #0171A1;
+    height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    width: 25px;
+    right:20px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:32px;
+    font-size:12px;
+    color:#fff;
+    border-radius: 0 !important;
+}
+
+.shipment-info .ribbon:after,
+.shipment-info .ribbon:before {
+    content: '';
+    position: absolute;
+    border-top: 20px solid #0171A1;
+    height: 0;
+    width: 0;
+    top: 100%;
+}
+
+.shipment-info .ribbon:after {
+    border-left: 25px solid transparent;
+    right: 0px;
+}
+
+.shipment-info .ribbon:before {
+    border-right: 25px solid transparent;
+    left: 0px;
+}
+
+.shipment-info .ribbon-container {
+    background: #E1ECF0;
+    height: 30px;
+    margin: 0 auto;
+    position: absolute;
+    width: 25px;
+    right:20px;
+    text-align:center;
+    vertical-align:middle;
+    line-height:32px;
+    font-size:12px;
+    color:#4A4A4A;
+    border-radius: 0 !important;
+    font-family: 'Inter-SemiBold', sans-serif;
+}
+
+.shipment-info .ribbon-container:after,
+.shipment-info .ribbon-container:before {
+    content: '';
+    position: absolute;
+    border-top: 20px solid #E1ECF0;
+    height: 0;
+    width: 0;
+    top: 100%;
+}
+
+.shipment-info .ribbon-container:after {
+    border-left: 25px solid transparent;
+    right: 0px;
+}
+
+.shipment-info .ribbon-container:before {
+    border-right: 25px solid transparent;
+    left: 0px;
+}
+
+/* CONTAINERS */
+.shipment-info .cont-fluid-wrapper .container-title {
+    color: #4A4A4A;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.shipment-info .container-grid .v-data-table {
+    box-shadow: none !important;
+}
+
+.shipment-info .container-grid .v-data-table .v-data-table__wrapper .v-data-table-header {
+    background-color: #F1F6FA;
+}
+
+.shipment-info .container-grid .v-data-table .v-data-table__wrapper .v-data-table-header tr th {
+    padding: 5px 16px !important;
+    height: 24px !important;
+    font-size: 10px;
+    color: #6D858F;
+    font-family: 'Inter-Medium', sans-serif;
+    border-bottom: none !important;
+}
+
+.shipment-info .container-grid .v-data-table .v-data-table__wrapper tbody tr td {
+    font-size: 12px;
+    padding: 3px 16px;
+    height: 24px !important;
+    border-bottom: 1px solid #F1F6FA !important;
+}
+
+/* SHIPMENT SCHEDULING OPTIONS */
+.shipment-info.schedule-options .cont-fluid-wrapper .schedule-title {
+    color: #4A4A4A;
+    font-family: 'Inter-Regular', sans-serif;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.shipment-info.schedule-options .cont-fluid-wrapper .customCard {
+    border: 1px solid #e1ecf0;
+    border-radius: 4px;
+    margin: 10px 0 0;
+    box-shadow: none !important;
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+/* SUPPLIER MOBILE  */
+.shipment-info .mobile-supplier-info-wrapper {
+    width: 100%;
+    display: flex;
+    padding: 10px 0 0;
+}
+
+.shipment-info .mobile-supplier-info-wrapper .mobile-supplier-info {
+    width: 50%;
+    padding: 5px 12px 0;
+}
+
+.shipment-info .mobile-supplier-info-wrapper .mobile-supplier-full {
+    width: 100%;
+    padding: 5px 12px 0;
+}
+
+/* CONTAINER MOBILE */
+.shipment-info .container-grid-mobile {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: auto;
+}
+
+.shipment-info .container-grid-mobile .container-items-mobile {
+    border: 1px solid #e1ecf0;
+    border-radius: 4px;
+    box-shadow: none !important;
+    padding: 0 20px;
+    position: relative;
+    min-height: 100px;
+}
+
+.shipment-info .container-grid-mobile .container-data-wrapper {
+    padding: 15px 0 20px;
+}
+
+.shipment-info .container-grid-mobile .container-data-wrapper .container-data {
+    width: 50%;
+    padding: 5px 12px;
+}
+
+.shipment-info .container-grid-mobile .container-data-wrapper .container-data .heading {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-info .building-name {
+        font-size: 14px;
+    }
+
+    .shipment-info .supplier-name {
+        font-size: 14px;
+    }
+
+    .shipment-info .place-wrapper .place-content p {
+        align-items: flex-start;
+    }
+    
+    .shipment-info .place-wrapper .place-content {
+        align-items: flex-start;
+    }
+
+    .shipment-info .cont-fluid-wrapper .heading.shipment-info-content {
+        width: 90px;
+        /* width: 125px; */
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .shipment-info .cont-fluid-wrapper {
+        padding: 20px 16px !important;
+    }
+    
+    .shipment-info .cont-fluid-wrapper .shipment-info-wrapper {
+        /* padding: 10px 16px 0; */
+        padding: 10px 8px 0;
+    }
+
+    .shipment-info .container-wrapper {
+        padding: 16px !important;
+    }
+
+    .shipment-info .container-wrapper .supplier-name {
+        padding-right: 35px;
+    }
+
+    .shipment-info .cont-fluid-wrapper .customCard .container-wrapper .po-wrapper {
+        padding: 5px 0;
+    }
+}

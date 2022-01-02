@@ -1,0 +1,134 @@
+@import '../../colors.scss';
+
+.shipment-info {
+    .cont-fluid-wrapper {
+        padding: 20px 20px 10px !important;
+
+        .heading-place,
+        .heading-content {
+            margin: 0 !important;
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    /* CONTAINER */
+    &.milestone-container-wrapper {
+        .container-title {
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .container-grid {
+            .v-data-table {
+                box-shadow: none !important;
+
+                .v-data-table__wrapper {
+                    thead {
+                        background-color: $light-white;
+
+                        tr {
+                            th {
+                                padding: 5px 16px !important;
+                                height: 24px !important;
+                                font-size: 10px;
+                                color: $dark-grey;
+                                font-family: 'Inter-Medium', sans-serif;
+                                border-bottom: none !important;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                font-size: 12px;
+                                padding: 3px 16px;
+                                height: 24px !important;
+                                border-bottom: 1px solid $light-white !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .container-grid-mobile {
+            display: grid;
+            grid-gap: 15px;
+            grid-template-columns: auto;
+            
+            .container-items-mobile {
+                border: 1px solid $light-border;
+                border-radius: 4px;
+                box-shadow: none !important;
+                padding: 0 20px;
+                position: relative;
+                min-height: 100px;
+
+                .container-data-wrapper {
+                    padding: 15px 0 20px;
+
+                    .container-data {
+                        width: 50%;
+                        padding: 5px 12px;
+
+                        .heading {
+                            width: 100%;
+                        }
+
+                        .heading-content {
+                            font-size: 12px;
+                        }
+                    }
+                }
+                
+                .ribbon-container {
+                    background: $light-border;
+                    height: 30px;
+                    margin: 0 auto;
+                    position: absolute;
+                    width: 25px;
+                    right:20px;
+                    text-align:center;
+                    vertical-align:middle;
+                    line-height:32px;
+                    font-size:12px;
+                    color:$default-text-color;
+                    border-radius: 0 !important;
+                    font-family: 'Inter-SemiBold', sans-serif;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        border-top: 20px solid $light-border;
+                        height: 0;
+                        width: 0;
+                        top: 100%;
+                    }
+
+                    &::after {
+                        border-left: 25px solid transparent;
+                        right: 0px;
+                    }
+                    
+                    &::before {
+                        border-right: 25px solid transparent;
+                        left: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .shipment-info-divider {
+        border-color: $light-border !important;
+        margin: 12px 0 4px;
+    }
+}

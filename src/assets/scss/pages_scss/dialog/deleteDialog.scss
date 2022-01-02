@@ -1,0 +1,58 @@
+@import '../../colors.scss';
+
+.item-delete-dialog {
+    .delete-dialog {
+        font-family: 'Inter-Regular', sans-serif;
+
+        h2 {
+            color: $default-text-color; 
+            font-size: 20px; 
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 0; 
+            font-size: 14px; 
+            color: $default-text-color;
+        }
+
+        .v-card__title {
+            .headline {
+                border: none !important;
+            }
+        }
+
+        .v-card__text {
+            margin-bottom: 0 !important;
+        }
+
+        .v-card__actions {
+            position: unset !important;
+
+            .delete-btn-wrapper {
+                border: none !important;
+
+                button {
+                    text-transform: capitalize;
+                    letter-spacing: 0;
+                    font-size: 14px;
+                    min-width: 76px;
+                    margin-bottom: 10px;
+                    height: 40px;
+                    box-shadow: none;
+                }
+
+                .delete-btn {
+                    background-color: $dark-blue !important;
+                    color: $white;
+                }
+
+                .cancel-btn {
+                    background-color: $custom-background !important;
+                    color: $dark-blue;
+                    border: 1px solid $custom-border !important;
+                }
+            }
+        }
+    }
+}

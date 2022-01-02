@@ -1,0 +1,100 @@
+@import '../../colors.scss';
+
+.v-dialog {
+    .v-card {
+        .v-card__title {
+            border-bottom: 2px solid $table-border;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px !important;
+            margin-bottom: 0 !important;
+            position: sticky;
+            z-index: 9999;
+            top: 0;
+            background-color: $white;
+
+            .headline {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-family: 'Inter-SemiBold', sans-serif !important;
+                color: $default-text-color;
+                font-size: 20px !important;
+
+                .warehouse-name {
+                    font-size: 14px;
+                    color: $sub-text-color;
+                    margin-left: 8px;
+                    font-family: 'Inter-Regular', sans-serif !important;
+                }
+
+                .po-num {
+                    font-family: 'Inter-SemiBold', sans-serif !important;
+                }
+            }
+
+            .btn-close {
+                color: $default-text-color !important;
+            }
+        }
+
+        .v-card__text {
+            background-color: $white;
+
+            .v-input {
+                .v-input__control {
+                    background-color: $white;
+                }
+            }  
+        }
+
+        .v-card__actions {
+            border-top: 2px solid $table-border;
+            height: 70px;
+            position: sticky;
+            z-index: 9999;
+            bottom: 1px;
+            padding: 10px 24px;
+            background-color: $white;
+        }
+    }
+
+    /* Scrollbar */
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+    }
+    
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: #d3d3d3; 
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: #d3d3d3; 
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .v-dialog {
+        .v-card {
+            .v-card__text {
+                margin-bottom: 65px;
+            }
+
+            .v-card__actions {
+                position: fixed;
+                width: 100%;
+                bottom: -1px;
+                padding: 8px 12px;
+            }
+        }
+    }
+}

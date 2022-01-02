@@ -1,0 +1,91 @@
+@import '../../colors.scss';
+
+.v-dialog {
+    &.category-dialog {
+        .dialog-wrapper {
+            .v-card__title {
+                .header-actions {
+                    button {
+                        &.btn-close {
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+    
+            .v-card__text {
+                min-height: 258px !important;
+                padding: 24px;
+    
+                .item-title {
+                    color: $grey;
+                    font-size: 10px;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    margin-bottom: 3px;
+                }
+    
+                .v-input {
+                    .v-input__control {
+                        .v-input__slot {
+                            fieldset {
+                                border: 1px solid $custom-border;
+                                font-size: 14px;
+                                background-color: $white;
+                            }
+    
+                            .v-text-field__slot {
+                                input,
+                                textarea {
+                                    font-size: 14px;
+    
+                                    &::placeholder {
+                                        color: $light-grey !important;
+                                    }
+                                }
+    
+                                textarea {
+                                    height: 76px;
+                                    line-height: 20px;
+                                    margin: 0 !important;
+                                    padding: 8px 8px 8px 0;
+                                }
+                            }
+                        }
+    
+                        .v-text-field__details {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+    
+            .v-card__actions {
+                button {
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .v-dialog {
+        &.category-dialog {
+            margin: 15px;
+            background-color: $white;
+
+            .dialog-wrapper {
+                box-shadow: none !important;
+
+                .v-card__actions {
+                    position: unset;
+                    padding: 8px 12px;
+
+                    button {
+                        padding: 10px !important;
+                    }
+                }
+            }
+        }
+    }    
+}

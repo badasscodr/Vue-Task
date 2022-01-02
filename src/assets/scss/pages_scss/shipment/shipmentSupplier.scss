@@ -1,0 +1,169 @@
+@import '../../colors.scss';
+
+.shipment-info {
+    .cont-fluid-wrapper {
+        padding: 20px 20px 10px !important;
+
+        .heading-place,
+        .heading-content {
+            margin: 0 !important;
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }   
+
+    /* SUPPLIER */
+    &.supplier-wrapper {
+        .supplier-title {
+            color: $default-text-color;
+            font-family: 'Inter-Regular', sans-serif;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .customCard {
+            border: 1px solid $white-to-blue;
+            border-radius: 4px;
+            margin: 10px 0 0;
+            box-shadow: none !important;
+
+            .ribbon {
+                background: $dark-blue;
+                height: 30px;
+                margin: 0 auto;
+                position: absolute;
+                width: 25px;
+                right:20px;
+                text-align:center;
+                vertical-align:middle;
+                line-height:32px;
+                font-size:12px;
+                color:$white;
+                border-radius: 0 !important;
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    border-top: 20px solid $dark-blue;
+                    height: 0;
+                    width: 0;
+                    top: 100%;
+                }
+
+                &::after {
+                    border-left: 25px solid transparent;
+                    right: 0px;
+                }
+
+                &::before {
+                    border-right: 25px solid transparent;
+                    left: 0px;
+                }
+            }            
+
+            .heading-supplier {
+                color: $dark-grey;
+                font-size: 10px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-bottom: 3px !important;
+            }
+
+            .heading-content {
+                font-size: 12px;
+            }
+
+            .heading-content-desc {
+                margin: 0 !important;
+                color: $default-text-color;
+                font-family: 'Inter-Regular', sans-serif;
+                font-size: 12px;
+            }
+
+            .container-wrapper {
+                padding: 20px;
+
+                .supplier-name {
+                    font-size: 14px;
+                    font-family: 'Inter-Medium', sans-serif;
+                    color: $default-text-color;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                    text-transform: uppercase;
+                }
+
+                .supplier-desktop-row {
+                    margin-top: 15px;
+
+                    .supplier-col {
+                        padding-top: 0;
+                    }
+                }
+
+                .po-wrapper {
+                    .po-num-item {
+                        font-size: 12px;
+                        color: $dark-grey;
+                        padding: 4px 8px;
+                        border: 1px solid $white-to-blue;
+                        border-radius: 99px;
+                        margin-right: 5px;
+                    }
+                }
+
+                .mobile-supplier-info-wrapper {
+                    width: 100%;
+                    display: flex;
+                    padding: 10px 0 0;
+
+                    .mobile-supplier-info {
+                        width: 50%;
+                        padding: 5px 12px 0;
+                    }
+
+                    .mobile-supplier-full {
+                        width: 100%;
+                        padding: 5px 12px 0;
+                    }                    
+                }
+            }            
+        }
+    }
+
+    .shipment-info-divider {
+        border-color: $white-to-blue !important;
+        margin: 12px 0 4px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-info {
+        .supplier-name {
+            font-size: 14px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .shipment-info {
+        .cont-fluid-wrapper {
+            padding: 20px 16px !important;
+        }
+
+        .container-wrapper {
+            padding: 16px !important;
+
+            .supplier-name {
+                padding-right: 35px !important;
+            }
+
+            .po-wrapper {
+                padding: 5px 0;
+            }
+        }
+    }
+}

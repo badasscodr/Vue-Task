@@ -1,0 +1,328 @@
+@import '../../colors.scss';
+
+.item-dialog-view {
+    .dialog-wrapper {
+        .v-card__title {
+            border-bottom: 2px solid $light-border;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+
+            .headline {
+                font-family: 'Inter-SemiBold', sans-serif !important;
+                font-size: 20px;
+            }
+
+            .header-actions {
+                display: flex;
+                align-items: center;
+
+                button {
+                    min-width: 78px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    &.btn-delete {
+                        color: $default-text-color !important;
+                        margin-left: 10px;
+
+                        span {
+                            font-family: 'Inter-Regular', sans-serif !important;
+                        }
+                    }
+
+                    &.btn-close {
+                        margin-left: 15px;
+                        min-width: unset;
+                    }
+                }
+            }
+        }
+
+        .v-card__text {
+            min-height: 258px !important;
+
+            .view-wrapper {
+                padding: 24px 0 10px !important;
+                display: flex;  
+
+                .view-box-img {
+                    img {
+                        width: 148px;
+                        height: 148px;
+                    }
+                }              
+
+                .view-box-info {
+                    padding: 6px 0 6px 24px;
+                    width: 100%;
+
+                    .item-name {
+                        font-size: 16px;
+                        font-family: 'Inter-SemiBold', sans-serif;
+                        color: $default-text-color;
+                        margin-bottom: 8px;
+                    }  
+                    
+                    .item-price {
+                        font-size: 16px;
+                        font-family: 'Inter-SemiBold', sans-serif;
+                        color: $dark-grey;
+                        margin: 10px 0;
+                    } 
+
+                    .view-box-other-data {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        width: 100%;
+
+                        .item-cat,
+                        .item-count {
+                            font-size: 14px;
+                            font-family: 'Inter-Regular', sans-serif;
+                            color: $default-text-color;
+                            margin-bottom: 8px;
+                        } 
+
+                        .item-info {
+                            width: 25%;
+                            margin-right: 8px;
+
+                            .item-title {
+                                color: $dark-grey;
+                                font-size: 14px;
+                                margin-bottom: 5px;
+                            }
+
+                            .item-data {
+                                color: $default-text-color;
+                                font-size: 14px;
+                                margin-bottom: 0;
+                            }
+
+                            &.dimensions {
+                                width: 35%;
+
+                                .item-data-dimensions {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    width: 100%;
+
+                                    p {
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                        margin-bottom: 0;
+                                    }
+
+                                    .item-subtitle {
+                                        margin-right: 5px;
+                                    }
+
+                                    .item-subtitle-data {
+                                        color: $default-text-color;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+
+            .product-description-wrapper {
+                .view-box-other-data {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+
+                    .item-info {
+                        width: 25%;
+                        margin-right: 8px;
+
+                        .item-title {
+                            color: $dark-grey;
+                            font-size: 14px;
+                            margin-bottom: 5px;
+                        }
+
+                        .item-data {
+                            color: $default-text-color;
+                            font-size: 14px;
+                            margin-bottom: 0;
+                        } 
+
+                        &.dimensions {
+                            width: 30%;
+
+                            .item-data-dimensions {
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                width: 100%;
+
+                                p {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin-bottom: 0;
+                                }
+
+                                .item-subtitle {
+                                    margin-right: 5px;
+                                }
+
+                                .item-subtitle-data {
+                                    color: $default-text-color;
+                                }
+                            }
+                        }
+                    } 
+                }
+
+                .product-description {
+                    font-size: 14px;
+                    font-family: 'Inter-Regular', sans-serif;
+                    color: $default-text-color;
+                    margin-top: 5px;
+                } 
+            }
+
+            span {
+                font-size: 14px;
+                font-family: 'Inter-Regular', sans-serif;
+                color: $dark-grey;
+                padding-bottom: 6px !important;
+                margin-right: 10px;
+            } 
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .v-dialog {
+        &.item-dialog-view {
+            margin: 8px;
+
+            .v-card {
+                .v-card__title {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    width: 100%;
+                    border-bottom: none;
+
+                    .headline {
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 10px;
+
+                        span {
+                            font-family: 'Inter-SemiBold', sans-serif;
+                        }
+                    }
+
+                    .header-actions {
+                        button {
+                            &.btn-delete {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                min-width: 40px;
+                                padding: 0 12px !important;
+
+                                span {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .v-card__text {
+                    .view-wrapper {
+                        flex-direction: column;
+                        padding: 0 0 15px !important;
+
+                        .view-box-img {
+                            height: 340px;
+                            margin-bottom: 20px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+
+                        .view-box-info {
+                            padding: 0;
+
+                            p {
+                                margin-bottom: 0 !important;
+                            }
+
+                            .item-price {
+                                margin-bottom: 10px !important;
+                            }
+
+                            .view-box-other-data {
+                                flex-direction: column;
+    
+                                .item-title {
+                                    padding-right: 8px;
+                                    margin-bottom: 0;
+                                }
+    
+                                .item-info {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+                                    margin: 3px 0;
+    
+                                    &.dimensions {
+                                        align-items: flex-start;
+                                        flex-direction: column;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .product-description-wrapper {
+                        .view-box-other-data {
+                            flex-direction: column;
+
+                            .item-title {
+                                padding-right: 8px;
+                                margin-bottom: 0;
+                            }
+
+                            .item-info {
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-start;
+                                align-items: center;
+                                margin: 3px 0;
+
+                                &.dimensions {
+                                    align-items: flex-start;
+                                    flex-direction: column;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

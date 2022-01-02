@@ -1,0 +1,189 @@
+@import '../../colors.scss';
+
+.notifications-wrapper {
+    font-family: 'Inter-Regular', sans-serif;
+
+    .tab-name {
+        .tab-method {
+            padding: 20px 24px;
+            color: $default-text-color;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .notification-content {
+        min-height: 300px;
+        background-color: $white;
+        padding: 24px 20px;
+
+        .notification-wrapper {
+            .row {
+                justify-content: space-between;
+
+                .col-12 {
+                    max-width: 48%;
+                }
+
+                .notifications {
+                    .notification-header {
+                        h3 {
+                            font-size: 20px;
+                            margin-bottom: 5px;
+                        }
+        
+                        p {
+                            font-size: 14px;
+                            color: $dark-grey;
+                            line-height: 22px;
+                            margin-bottom: 0;
+                        }
+    
+                    }
+    
+                    .notification-body {
+                        .notification-box {
+                            border-radius: 4px;
+                            border: 1px solid $divider-bg;
+                            min-height: 62px;
+                            margin-top: 16px;
+                            width: 100%;
+                            padding: 16px;
+    
+                            h4 {
+                                color: $default-text-color;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .v-input {
+                                    margin-top: 0;
+
+                                    &.success--text {
+                                        color: $green !important;
+                                        caret-color: $green !important;
+                                    }
+
+                                    &.v-input--selection-controls {
+                                        padding-top: 0;
+
+                                        &.v-input--switch--inset {
+                                            color: $caret-light !important;
+                                            caret-color: $caret-light !important;
+
+                                            .v-input--switch__track{
+                                                height: 30px;
+                                                opacity: 1;
+                                                border: 1px solid $divider-bg !important;
+
+                                                &:after{
+                                                    content: "Off";
+                                                    color: $grey;
+                                                    position: absolute;
+                                                    top: 6px;
+                                                    right: 8px;
+                                                    font-size: 12px;
+                                                    font-family: "Inter-Regular", sans-serif;
+                                                    font-weight: 100;
+                                                }
+                                            }
+
+                                            .v-input--switch__track,
+                                            .v-input--selection-controls__input {
+                                                width: 58px;
+                                                color: $caret-light;
+                                                caret-color: $caret-light;
+                                                margin: 0;
+                                            }
+
+                                            .v-input--switch__thumb {
+                                                height: 22px;
+                                                width: 22px;
+                                                top: calc(50% - 10px);
+                                                color: $table-header-text-color;
+                                            }
+
+                                            /* IF SWITCH IS ACTIVE */
+                                            &.v-input--is-label-active.v-input--is-dirty {
+                                                .v-input--switch__track {        
+                                                    &:after{
+                                                        content: "On";
+                                                        color: $white;
+                                                        position: absolute;
+                                                        top: 6px;
+                                                        left: 8px;
+                                                        font-size: 12px;
+                                                        font-family: "Inter-Regular", sans-serif;
+                                                        font-weight: 100;
+                                                    }
+                                                }
+    
+                                                .v-input--switch__thumb {
+                                                    transform: translate(28px, 0) !important;
+                                                    color: $white !important;
+                                                }
+                                            }
+                                        }                                           
+                                    }
+                                }
+                            }
+    
+                            .recepients {
+                                .card-title {
+                                    color: $grey;
+                                    font-size: 10px;
+                                    text-transform: uppercase;
+                                    font-family: 'Inter-SemiBold', sans-serif;
+                                    margin: 8px 0 6px;
+                                }
+    
+                                small {
+                                    color: $grey;
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .notifications-wrapper {    
+        .tab-name {
+            .tab-method {
+                padding: 16px;
+            }
+        }
+    
+        .notification-content {
+            padding: 16px;
+    
+            .notification-wrapper {
+                .row {                    
+                    .col-12 {
+                        max-width: 100%;
+                    }
+    
+                    .notifications {
+                        .notification-header {
+                            h3 {
+                                font-family: 'Inter-Medium', sans-serif;
+                                margin-bottom: 6px;
+                            }        
+                        }
+                    }
+                }
+
+                .divider {
+                    height: 10px;
+                    width: 100%;
+                    background-color: $table-header-background;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}

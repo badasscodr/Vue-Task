@@ -1,0 +1,32 @@
+@import './colors.scss';
+
+body {
+    .v-application {
+        .btn-blue {
+            background-color: $dark-blue !important;
+            color: $white !important;
+            padding: 10px 16px !important;
+            font-size: 14px;
+            height: 40px !important;
+            text-transform: capitalize;
+            letter-spacing: 0;
+            box-shadow: none !important;
+            border-radius: 4px;
+            font-family: 'Inter-Regular', sans-serif;
+        }
+        
+        .btn-white {
+            background-color: $white !important;
+            color: $dark-blue !important;
+            border: 1px solid $light-grey !important;
+            padding: 10px 16px !important;
+            font-size: 14px;
+            height: 40px !important;
+            text-transform: capitalize;
+            letter-spacing: 0;
+            box-shadow: none !important;
+            border-radius: 4px;
+            font-family: 'Inter-Regular', sans-serif;
+        }
+    }       
+}

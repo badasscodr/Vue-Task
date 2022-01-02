@@ -1,0 +1,117 @@
+@import './colors.scss';
+
+* {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+html, body {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Inter-Regular', sans-serif;
+    color: $default-text-color;
+}
+
+div, span, small {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+/* Drawer Menu */
+.v-menu__content {
+    &.drawer-menu-popover {
+        min-width: 234px !important;
+        width: 234px;
+        border-radius: 0;
+        left: 220px !important;
+
+        .v-card {
+            background-color: $dark-blue;
+            border-radius: 0;
+
+            .v-list {                
+                background-color: $dark-blue;
+                padding: 0;
+
+                .v-list-item {
+                    color: $white-to-blue !important;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    padding: 0;
+
+                    .v-list-item__title {
+                        a {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-size: 16px;
+                            color: $white-to-blue !important;
+                            text-decoration: none;
+                            height: 48px;
+                            padding-left: 10px;
+                            border-left: 6px solid $dark-blue;
+
+                            &:hover {
+                                background-color: $hover-blue;
+                                border-left: 6px solid $hover-blue;
+                            }
+
+                            &.router-link-exact-active,
+                            &.active-link {
+                                background-color: $dark-blue-active;
+                                border-left: 6px solid $light-blue;
+                                color: $white;
+                                padding-left: 10px !important;
+
+                                &:hover {
+                                    background-color: $dark-blue-active !important;
+                                    border-left: 6px solid $light-blue !important;
+                                }
+                            }
+
+                            img {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+body {
+    input,
+    textarea,
+    .view-notes {
+        /* Scrollbar */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #d3d3d3; 
+        }
+        
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #d3d3d3; 
+        }
+    }
+}
+
+/* TABLET SIZE */
+@media screen and (min-width: 1201px) and (max-width: 1264px) {
+    .v-menu__content {
+        &.drawer-menu-popover {
+            left: 205px !important;
+        }
+    }
+}

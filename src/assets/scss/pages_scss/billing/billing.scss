@@ -1,0 +1,49 @@
+@import '../../colors.scss';
+
+.billing-wrapper {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+
+    .billing-due {
+        min-height: 114px;
+        background-color: $white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px;
+
+        .due-info {
+            h3 {
+                color: $dark-grey;
+                font-size: 16px;
+                font-family: 'Inter-Regular', sans-serif;
+            }
+
+            h2 {
+                color: $default-text-color;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 766px) {
+    .billing-wrapper {
+        padding: 0;
+
+        .billing-due {
+            padding: 16px;
+            min-height: 86px;
+
+            .due-info {
+                h3 {
+                    font-size: 14px;
+                }
+    
+                h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

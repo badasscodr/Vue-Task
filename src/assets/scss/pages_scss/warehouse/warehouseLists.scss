@@ -1,0 +1,308 @@
+@import '../../colors.scss';
+
+.warehouse-lists-wrapper {
+    width: 25%;
+
+    .warehouse-lists-header {
+        .warehouse-header {
+            h3 {
+                padding: 15px;
+                color: $default-text-color;
+                font-size: 20px;
+                height: 64px;
+                margin-bottom: 0;
+                border-bottom: 1px solid $light-border;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-family: 'Inter-Regular', sans-serif;
+            }
+        }
+    }
+
+    .warehouse-search {
+        border-bottom: 1px solid $light-border;
+        min-height: 57px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        position: relative;
+        font-family: 'Inter-Regular', sans-serif;
+
+        p {
+            font-size: 14px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-family: 'Inter-Regular', sans-serif;
+
+            span {
+                color: $dark-grey !important;
+            }
+        }
+
+        .search-warehouse {
+            border: 1px solid $light-grey;
+            border-radius: 4px;
+            padding: 5px;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search {
+            opacity: 0;
+            transition: all 0.3s ease;
+            position: absolute;
+            z-index: -1;
+
+            &.expanded {
+                background-color: $white;
+                left: 16px;
+                right: 16px;
+                opacity: 1;
+                z-index: 1;
+
+                input {
+                    height: 40px;
+                    width: calc(100% - 1px);
+                    font-size: 14px;
+                    padding-left: 35px;
+                    padding-right: 60px;
+                    border: 1px solid $light-grey;
+                    border-radius: 4px;
+
+                    &::placeholder {
+                        color: $light-grey !important;
+                        outline: 0 !important;
+                    }
+
+                    &:focus{
+                        &::placeholder {
+                            color: $light-grey !important;
+                            outline: 0;
+                        }
+                    }
+                }
+            }
+
+            input {
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+
+        .input-search-icon {
+            &.expanded {    
+                position: absolute;
+                left: 10px;
+                top: 12px;
+            }
+        }
+
+        .close-btn {    
+            position: absolute;
+            z-index: 100;
+            margin-right: 5px;
+            right: 16px;
+            background-color: $white;
+            height: 30px;
+            width: 55px;
+            font-size: 14px;
+            color: $dark-blue;
+        }
+    }
+
+    .warehouse-body-lists {
+        max-height: calc(100vh - 298px);
+        overflow: auto;
+
+        .warehouse-lists {
+            .no-warehouse-searched {
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: 'Inter-Regular', sans-serif;
+                margin-top: 20px;
+
+                img {
+                    margin-bottom: 10px;
+                }
+
+                h3 {
+                    color: $default-text-color;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    color: $dark-grey;
+                    font-size: 14px;
+                    margin-bottom: 0;
+                    padding: 0 15px;
+                }
+            }
+
+            .warehouse-item {
+                padding: 10px 16px 16px;
+                min-height: 100px;
+                border-bottom: 1px solid $light-border;
+                font-size: 14px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $table-hover-background;
+                }
+
+                &.active {
+                    background-color: $caret-light !important;
+                }
+
+                .warehouse-name {
+                    color: $dark-blue;
+                    font-family: 'Inter-SemiBold', sans-serif;
+                    font-size: 16px !important;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+
+                    .warehouse-name-info {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        flex: 1 1 100%;
+                        min-width: 0;
+
+                        .p-name {
+                            margin-bottom: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 16px;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                        }
+
+                        span {
+                            font-size: 10px;
+                            font-family: 'Inter-Medium', sans-serif;
+                            background-color: #F9F9F9;
+                            min-width: 1px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-transform: capitalize;
+                            border: 1px solid $light-border;
+                            border-radius: 20px;
+                            height: 20px;
+                            padding: 3px 8px;
+                            margin-left: 6px;
+                            color: $default-text-color !important;
+                        }
+                    }
+                }
+
+                .warehouse-address {
+                    color: $dark-grey;
+                    font-family: 'Inter-Regular', sans-serif;
+                    margin: 0 0 5px;
+                }
+
+                .warehouse-units {
+                    color: $dark-grey;
+                    font-family: 'Inter-Regular', sans-serif;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+                    .cartons {
+                        margin-right: 20px;
+                    }
+
+                    span {
+                        color: $default-text-color !important;
+                        font-family: 'Inter-SemiBold', sans-serif;
+                    }
+                }
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+          
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+           
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #d3d3d3; 
+        }
+          
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #d3d3d3; 
+        }
+    }
+}
+
+.v-list {
+    &.warehouse-lists-sort-items {
+        width: 200px;
+        padding: 16px;
+
+        .v-input {
+            margin-top: 0;
+
+            label {
+                font-size: 14px;
+                color: $default-text-color;
+            }
+
+            .v-messages {
+                display: none;
+            }
+        }       
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .warehouse-lists-wrapper {
+        width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1360px) {
+    
+}
+
+@media screen and (min-width: 1361px) and (max-width: 1440px) {
+    
+}
+
+/* TABLET */
+@media screen and (min-width: 1201px) and (max-width: 1264px) {
+    .warehouse-lists-wrapper {
+        width: 28% !important;
+    }
+
+    .warehouse-table-wrapper {
+        width: 72% !important;
+    }
+}

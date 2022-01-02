@@ -1,0 +1,393 @@
+@import '../../colors.scss';
+
+.milestone-shipments-wrapper {
+    min-height: 500px;
+	font-family: 'Inter-Regular', sans-serif;   
+
+    .v-stepper {
+        box-shadow: none !important;
+
+        .milestone-content {
+            .milestone-items {
+                .v-stepper__step {
+                    padding: 24px 0 16px;
+
+                    &.custom-vue-stepper {
+                        .v-stepper__step__step {
+                            background-color: transparent !important;
+                            color: transparent !important;
+                            width: 30px !important;
+                            background-repeat: no-repeat !important;
+                            border-radius: 0 !important;
+                            margin-left: 2px !important;
+        
+                            i {
+                                display: none !important;
+                            }
+                        }
+        
+                        .v-stepper__label {
+                            width: 100%;
+        
+                            .released-event {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+                                .status {
+                                    display: none;
+                                    text-transform: capitalize;
+                                    font-size: 12px;
+                                    padding: 3px 6px;
+                                    border-radius: 4px;
+
+                                    span {
+                                        font-family: 'Inter-Medium', sans-serif;
+                                    }
+            
+                                    &.no {
+                                        color: $dark-red !important;
+                                        background-color: $custom-white;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        width: auto;
+                                    }
+                                }
+
+                                &.no-data-holds {
+                                    span {
+                                        color: $grey !important;
+                                    }
+                                }
+            
+                                &.no,
+                                &.both-f {
+                                    span {
+                                        color: $dark-red !important;
+                                    }
+                                }
+            
+                                &.yes {
+                                    .status{
+                                        &.yes {
+                                            color: $green !important;
+                                            background-color: $custom-white-2;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: auto;
+                                        }
+                                    }
+                                }
+                            }
+        
+                            span {
+                                font-size: 14px;
+                                color: $grey !important;
+                                font-family: 'Inter-Medium', sans-serif;
+                            }
+                        }
+
+                        /* ICONS - NOT COMPLETE and COMPLETE */
+                        &.booking_created {
+                            .v-stepper__step__step {
+                                background-image: url('../../../assets/icons/created.svg') !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step  {
+                                    background-image: url('../../../assets/icons/bookingCreated.svg') !important;
+                                }
+                            }
+                        }
+
+                        &.booking_confirmed {
+                            .v-stepper__step__step  {
+                                background-image: url("../../../assets/icons/confirmed.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step  {
+                                    background-image: url("../../../assets/icons/bookingConfirmed.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.empty_out {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/emptyGatedOut.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/emptyGatedOutCompleted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.full_in {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/fullGatedIn.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/fullGatedInComplete.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.check {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/check-not-completed.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/check-completed.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.released_at_terminal.has-data {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/releasedAtTerminal.svg") !important;
+                            }
+                        }
+
+                        &.released {
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/releasedAtTerminalCompleted.svg") !important;
+                                }
+                            }
+
+                            .v-stepper__label {
+                                span {
+                                    color: $dark-blue !important;
+                                }
+                            }
+                        }
+
+                        &.eta_logs {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/etaLog.svg") !important;
+                            }
+                        }
+
+                        &.released_at_terminal {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/releasedAtTerminalNoData.svg") !important;
+                            }
+                        }
+
+                        &.vessel_loaded {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/departed.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/bookingDeparted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.arrived {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/arrived.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/arrivedCompleted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.vessel_discharged {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/discharged.svg") !important;
+                                padding: 2px;
+                                background-repeat: no-repeat !important;
+                                color: transparent !important;
+                                background-color: transparent !important;
+                                margin-right: 10px !important;
+                                width: 28px;
+                                height: 30px;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/dischargedComplete-blue.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.last_free_day {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/calendar.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/calendarCompleted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.full_out {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/fullGatedOut.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/fullGatedOutCompleted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.empty_in {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/emptyGatedIn.svg") !important;
+                            }
+
+                            &.v-stepper__step--complete {
+                                .v-stepper__step__step {
+                                    background-image: url("../../../assets/icons/emptyGatedInCompleted.svg") !important;
+                                }
+                            }
+                        }
+
+                        &.appointment {
+                            .v-stepper__step__step {
+                                background-image: url("../../../assets/icons/appointmentComplete.svg") !important;
+                            }
+                        }
+                    }
+                }
+        
+                .v-stepper__content {
+                    margin: -8px -36px -16px 13px !important;
+                    border-left-style: dotted !important;
+                    border-width: 3px !important;
+                    border-color: $dark-blue !important;
+                    padding-top: 0 !important;
+                    padding-left: 25px !important;
+                    padding-right: 35px !important;
+    
+                    .v-stepper__wrapper {
+                        height: auto !important;
+                        line-height: 20px;
+    
+                        .milestone-container-wrapper {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+    
+                            p {
+                                font-size: 14px;
+                                color: $default-text-color;
+                                margin-bottom: 0 !important;
+                            }
+    
+                            &.released {
+                                flex-direction: column !important;
+                                align-items: flex-start !important;
+                                margin-bottom: 8px;
+    
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+    
+                                .milestone-container-num {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                }
+    
+                                .milestone-container-status {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+    
+                                    .status {
+                                        text-transform: capitalize;
+                                        font-size: 12px;
+                                        color: $dark-red;
+                                        background-color: $custom-white;
+                                        padding: 3px 6px;
+                                        border-radius: 4px;
+                                        margin: 0 8px 5px 0;
+
+                                        span {
+                                            font-family: 'Inter-Medium', sans-serif;
+                                        }
+    
+                                        &.yes {
+                                            color: $green !important;
+                                            background-color: $custom-white-2;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: auto;
+                                            text-transform: capitalize;
+                                            font-size: 12px;
+                                            padding: 1px 6px;
+                                            border-radius: 4px;
+                                            font-family: 'Inter-Medium', sans-serif;
+                                            margin: 0;
+                                        }
+    
+                                        &.no {
+                                            color: $dark-red !important;
+                                            background-color: $custom-white;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            width: auto;
+                                            text-transform: capitalize;
+                                            font-size: 12px;
+                                            padding: 1px 6px;
+                                            border-radius: 4px;
+                                            font-family: 'Inter-Medium', sans-serif;
+                                            margin: 0;
+                                        }
+                                    }
+                                }
+                            }                            
+                        }
+                    }
+                }
+    
+                .v-stepper__step--inactive {
+                    &.v-stepper__step--complete {
+                        .v-stepper__label {
+                            span {
+                                color: $dark-blue !important;
+                                font-family: "Inter-SemiBold", sans-serif;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+        
+                &:last-child {
+                    .v-stepper__content {                
+                        border: none !important;
+                        padding-left: 28px !important;
+                    }
+                }
+    
+                small {
+                    color: $dark-grey !important;
+                    font-size: 12px !important;
+                }
+            }
+        }
+    }    
+}

@@ -1,0 +1,336 @@
+.v-dialog.add-inventory-dialog {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.v-dialog.add-inventory-dialog .v-card__text {
+    min-height: 200px;
+    padding: 24px;
+}
+
+.v-dialog.add-inventory-dialog .v-card__actions button {
+    margin-right: 8px;
+}
+
+.v-dialog.add-inventory-dialog .v-card__actions button.has-empty {
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.add-inventory-info .v-data-table.add-table {
+    box-shadow: none !important;
+}
+
+.add-inventory-info .v-data-table.add-table .v-data-table__wrapper table {
+    table-layout: fixed;
+}
+
+.add-inventory-info .v-data-table.add-table .v-data-table__wrapper .v-data-table-header {
+    background-color: #F7F7F7;
+}
+
+.add-inventory-info .v-data-table.add-table .v-data-table__wrapper .v-data-table-header tr th {
+    font-size: 12px;
+    color: #6D858F !important;
+    text-transform: uppercase;
+    border: none !important;
+    padding: 11px !important;
+}
+
+.add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr:hover {
+    background-color: #fff !important;
+}
+
+.add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td {
+    padding: 8px 8px 8px 8px;
+    border-bottom: 2px solid #E1ECF0 !important;
+}
+
+/* UPDATING */
+.add-inventory-info .v-data-table.add-table.updating-stock table thead th:last-child {
+    padding: 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+}
+
+/* .add-inventory-info .v-data-table.add-table.updating table tbody tr td:last-child {
+    padding: 0 !important;
+    width: 0 !important;
+    min-width: 0 !important;
+} */
+
+/* TABLE INPUTS */
+.add-inventory-info  .v-input.table-text-fields .v-input__control,
+.add-inventory-info  .v-input.table-text-fields .v-input__control .v-input__slot .v-text-field__slot {
+    height: 45px;
+}
+
+.add-inventory-info  .v-input.table-text-fields .v-input__control .v-input__slot fieldset {
+    height: 50px;
+    border: 1px solid #B4CFE0;
+}
+
+.add-inventory-info  .v-input.table-text-fields .v-input__control .v-input__slot .v-text-field__slot input {
+    font-size: 14px;
+    text-align: right;
+}
+
+.add-inventory-info  .v-input.table-text-fields .v-input__control .v-input__slot .v-text-field__slot input::placeholder {
+    color: #B4CFE0;
+}
+
+.add-inventory-info  .v-input.table-text-fields .v-input__control .v-text-field__details {
+    display: none;
+}
+
+.add-inventory-info  .v-input.table-text-fields.amount .v-input__control .v-input__slot fieldset {
+    border: none !important;
+    color: #4a4a4a;
+}
+
+.add-inventory-info  .v-input.table-text-fields.amount .v-input__control .v-input__slot {
+    padding: 0;
+}
+
+.add-inventory-info .select-product.v-input {
+    background-color: #fff !important;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control {
+    height: 45px;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-text-field__details {
+    display: none;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot fieldset {
+    height: 50px;
+    border: 1px solid #B4CFE0;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-select__slot {
+    height: 45px;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-input__append-inner {
+    margin-top: 11px;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-input__append-inner i {
+    color: #0171A1;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-select__slot .v-select__selections,
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-select__slot .v-select__selections input {
+    font-size: 14px;
+}
+
+.add-inventory-info .select-product.v-input .v-input__control .v-input__slot .v-select__slot .v-select__selections input::placeholder {
+    color: #B4CFE0;
+}
+
+.add-inventory-info .v-menu__content .v-list.v-select-list .v-list-item.v-list-item--link .v-list-item__content .v-list-item__title {
+    font-size: 14px;
+}
+
+.add-inventory-info .add-row-wrapper {
+    padding: 10px 0;
+    border-bottom: 2px solid #E1ECF0;
+}
+
+.add-inventory-info .add-row-wrapper .add-btn {
+    margin-bottom: 0 !important;
+    background-color: #0171a100 !important;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    padding: 8px 16px;
+    font-size: 14px;
+    height: 40px;
+    color: #0171A1;
+    box-shadow: none;
+    border: 1px solid #B3CFE0 !important;
+    border-radius: 4px;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+.add-inventory-info .remove-btn span {
+    color: #F93131 !important;
+}
+
+.add-inventory-info .no-edit-view {
+    display: none;
+}
+
+.v-dialog.warehouse-dialog .warehouse-dialog-card .v-card__actions button {
+    margin-right: 8px;
+}
+
+.v-dialog.warehouse-dialog .warehouse-dialog-card .v-card__actions .has-empty {
+    opacity: 0.3;
+    cursor: auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 766px) {
+    .v-dialog.add-inventory-dialog {
+        margin: 0;
+        height: 100%;
+        max-height: 100% !important;
+        background-color: #fff;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card {
+        box-shadow: none !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__title .headline {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__title,
+    .v-dialog.add-inventory-dialog .v-card .v-card__text {
+        padding: 16px !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__title .headline .warehouse-name {
+        margin-left: 0 !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__text.add-inventory-info .v-data-table table thead{
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table {
+        table-layout: unset;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__header {
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td {
+        border-bottom: none !important;
+        padding: 8px 0;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell {
+        width: 100%;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 36px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-wrapper p {
+        margin-bottom: 0;
+        color: #6D858F;
+        font-family: 'Inter-SemiBold', sans-serif;
+        text-transform: uppercase;
+        margin-right: 8px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+4) {
+        border-bottom: 2px solid #E1ECF0 !important;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+5) {
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-wrapper.in-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add-inventory-info .add-row-wrapper {
+        border-bottom: none !important;
+        padding: 20px 0;
+    }
+
+    .add-inventory-info .add-row-wrapper button {
+        width: 100%;
+    }   
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .v-dialog.add-inventory-dialog {
+        background-color: #fff;
+        max-width: 80% !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card {
+        box-shadow: none !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__title,
+    .v-dialog.add-inventory-dialog .v-card .v-card__text {
+        padding: 16px 24px !important;
+    }
+
+    .v-dialog.add-inventory-dialog .v-card .v-card__text.add-inventory-info .v-data-table table thead {
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table {
+        table-layout: unset;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__header {
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td {
+        border-bottom: none !important;
+        padding: 8px 0;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell {
+        width: 100%;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 36px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-wrapper p {
+        margin-bottom: 0;
+        color: #6D858F;
+        font-family: 'Inter-SemiBold', sans-serif;
+        text-transform: uppercase;
+        margin-right: 8px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+4) {
+        border-bottom: 2px solid #E1ECF0 !important;
+        padding-bottom: 20px;
+        margin-bottom: 10px;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper table tbody td.v-data-table__mobile-row:nth-child(1n+5) {
+        display: none;
+    }
+
+    .add-inventory-info .v-data-table.add-table .v-data-table__wrapper tbody tr td .v-data-table__mobile-row__cell .product-mobile-wrapper.in-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add-inventory-info .add-row-wrapper {
+        border-bottom: none !important;
+        padding: 20px 0;
+    }
+
+    .add-inventory-info .add-row-wrapper button {
+        width: 100%;
+    }   
+}

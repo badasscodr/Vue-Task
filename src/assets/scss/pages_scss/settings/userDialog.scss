@@ -1,0 +1,88 @@
+@import '../../colors.scss';
+
+.add-user-dialog {
+    .v-card {
+        .v-card__text {
+            min-height: 200px;
+            padding: 24px;
+
+            .add-user-wrapper {
+                .add-user-info {
+                    .card-name {
+                        .card-title {
+                            color: $grey;
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            font-family: 'Inter-SemiBold', sans-serif;
+                            margin-bottom: 3px;
+
+                            span {
+                                text-transform: capitalize !important;
+                            }
+                        }
+                    }
+                    
+                    .col {
+                        padding-bottom: 0 !important;
+                        padding-top: 5px;
+                    }
+                }
+
+                .v-input {       
+                    font-size: 14px;
+                    color: $default-text-color;
+
+                    .v-input__control {
+                        background-color: $white;
+                    }
+
+                    .v-text-field__details {
+                        display: block;
+                        margin-bottom: 0;
+                    }
+                }                
+            }
+        }
+
+        .v-card__actions {
+            button {
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .add-user-dialog {
+        margin: 0 !important;
+        height: 100%;
+        max-height: 100% !important;
+        background-color: #fff;
+
+        .v-card {
+            box-shadow: none !important;
+            
+            .v-card__text {
+                margin-bottom: 20px !important;
+                padding-top: 30px;
+
+                .add-user-wrapper {
+                    .add-user-info {
+                        .card-name {
+                            .card-title {
+                                font-size: 12px;
+                            }
+                        }
+                    }              
+                }
+            }
+
+            .v-card__actions {
+                position: fixed;
+                width: 100%;
+                bottom: -1px;
+                padding: 8px;
+            }
+        }
+    }
+}

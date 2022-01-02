@@ -1,0 +1,47 @@
+
+/* Dialog */
+.add-payment-dialog .v-card .v-card__text {
+    min-height: 300px;
+    padding: 24px;
+}
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .add-payment-info .card-name .card-title {
+    color: #819FB2;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-family: 'Inter-SemiBold', sans-serif;
+    margin-bottom: 3px;
+}
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .add-payment-info .col {
+    padding-bottom: 0 !important;
+}
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .v-input.payment-checkbox .v-input__slot {
+    margin-bottom: 0;
+}
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .v-input.payment-checkbox .v-input__slot .v-input--selection-controls__input {
+    margin-right: 6px;
+}
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .v-input.payment-checkbox .v-input__slot label {
+    font-size: 12px !important;
+    font-family: 'Inter-Regular', sans-serif;
+    color: #4a4a4a;
+}
+
+
+.add-payment-dialog .v-card .v-card__text .add-payment-wrapper .v-input .v-text-field__details {
+    display: block;
+    margin-bottom: 0;
+}
+
+.add-payment-dialog .v-card .v-card__actions button {
+    margin-right: 8px;
+}
+
+.add-payment-dialog .v-card .v-card__actions button.has-empty {
+    opacity: 0.4;
+    cursor: pointer;
+}

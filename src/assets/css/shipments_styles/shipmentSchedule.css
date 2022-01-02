@@ -1,0 +1,142 @@
+.shipment-info.schedule-options .customCard {
+    padding: 12px !important;
+}
+
+.shipment-info.schedule-options .customCard .option-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.shipment-info.schedule-options .customCard .option-header .schedule-name {
+    color: #0171A1;
+    font-size: 14px;
+}
+
+.shipment-info.schedule-options .customCard .option-header .selected-status {
+    font-size: 11px;
+    color: #16B442;
+    padding: 3px 8px;
+    margin-left: 10px;
+    border: 1px solid #16B442;
+    border-radius: 20px;
+    font-family: 'Inter-Medium', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info,
+.shipment-info.schedule-options .customCard .schedule-info-prices {
+    margin-top: 8px;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info .schedule-heading,
+.shipment-info.schedule-options .customCard .schedule-info-prices .schedule-heading {
+    color: #819FB2;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3px !important;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info .schedule-data,
+.shipment-info.schedule-options .customCard .schedule-info-prices .schedule-data {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info-prices .schedule-data {
+    text-align: right !important;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info-prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shipment-info.schedule-options .customCard .schedule-info-prices .total {
+    font-size: 12px;
+    color: #4a4a4a;
+    font-family: 'Inter-SemiBold', sans-serif;
+    text-transform: uppercase;
+}
+
+/* CHOOSE SCHEDULE */
+.shipment-info.schedule-options .customCard .shipment-choose .option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+    width: 100%;
+}
+
+.shipment-info.schedule-options .customCard .shipment-choose .option-header .selected-status {
+    font-size: 11px;
+    color: #F5A227;
+    padding: 3px 8px;
+    margin-left: 10px;
+    border: 1px solid #F5A227;
+    border-radius: 20px;
+    font-family: 'Inter-Medium', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+.shipment-info.schedule-options .customCard .shipment-choose .schedule-info-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.shipment-info.schedule-options .customCard .shipment-choose .schedule-info-button .choose-this {
+    background-color: #0171A1 !important;
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    box-shadow: none !important;
+}
+
+.shipment-info.schedule-options .cont-fluid-wrapper .no-data-preloader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-info.schedule-options .customCard .schedule-col {
+        margin-bottom: 25px;
+    }
+
+    .shipment-info.schedule-options .customCard .schedule-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .shipment-info.schedule-options .customCard .schedule-info-prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .shipment-info.schedule-options .customCard .schedule-info .schedule-heading {
+        margin-bottom: 0 !important;
+        width: 95px;
+    }
+
+    .shipment-info.schedule-options .customCard .schedule-info-prices .schedule-heading {
+        margin-bottom: 0 !important;
+        width: 124px;
+    }
+
+    .shipment-info.schedule-options .customCard .shipment-choose .schedule-info-button button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,35 @@
+.billing-wrapper {
+    padding: 24px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.billing-wrapper .billing-due {
+    min-height: 114px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+}
+
+.billing-wrapper .billing-due .due-info h3 {
+    color: #6D858F;
+    font-size: 16px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.billing-wrapper .billing-due .due-info h2 {
+    color: #4A4A4A;
+    font-size: 24px;
+}
+
+.billing-wrapper .billing-due .due-button .btn-blue {
+    background-color: #0171A1;
+    color: #fff !important;
+    padding: 10px 16px;
+    font-size: 14px;
+    height: 40px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    box-shadow: none;
+}

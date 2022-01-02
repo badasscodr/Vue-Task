@@ -1,0 +1,300 @@
+@import '../../colors.scss';
+
+.warehouse-table-wrapper {
+    width: 75%;
+    border-top-right-radius: 4px;
+    border-left: 1px solid $light-border;
+    height: 100%;
+
+    .loading-wrapper {
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inventory-search-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        border-bottom: 1px solid $light-border;
+        min-height: 57px;
+        font-family: 'Inter-Regular', sans-serif;
+
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: $dark-grey;
+
+            .inventory-count {
+                color: $default-text-color !important;
+                font-family: 'Inter-Medium', sans-serif;
+            }
+            
+        }
+    }
+
+    .v-data-table {
+        &.inventory-table  {
+            box-shadow: none !important;
+            border: none !important;
+            height: 100%;
+
+            .v-toolbar {
+                border-bottom: 1px solid $light-border;
+
+                .v-toolbar__title {
+                    color: $default-text-color;
+                    font-family: 'Inter-Medium', sans-serif;
+
+                    .warehouse-name-wrapper {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .p-name {
+                            margin-bottom: 0;
+                            font-size: 20px;
+                            white-space: nowrap;
+                            max-width: 447px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-family: 'Inter-Medium', sans-serif;
+                        }
+
+                        span {
+                            font-size: 12px;
+                            font-family: 'Inter-Medium', sans-serif;
+                            background-color: #F9F9F9;
+                            min-width: 1px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            text-transform: capitalize;
+                            border: 1px solid $light-border;
+                            border-radius: 20px;
+                            height: 26px;
+                            padding: 3px 12px;
+                            margin-left: 8px;
+                            color: $default-text-color !important;
+                        }
+                    }
+                }
+
+                .btn-white {
+                    margin-right: 8px;
+                    padding: 10px !important;
+                    min-width: 40px !important;
+                }
+
+                .btn-blue {
+                    min-width: 130px !important;
+                }
+            }
+
+            .v-data-table__wrapper {
+                max-height: calc(100vh - 298px);
+                /* max-height: calc(100vh - 324px); */
+                overflow-y: auto;
+                overflow-x: hidden;
+
+                table {
+                    thead {
+                        tr {
+                            th {
+                                font-size: 12px;
+                                text-transform: uppercase;
+                                color: $table-header-text-color;
+                                border-bottom: 1px solid $light-border !important;
+                                padding: 10px 10px 10px 20px;
+                                font-family: 'Inter-Regular', sans-serif;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:hover {
+                                background: $table-hover-background !important;
+                            }
+                            
+                            td {
+                                font-size: 14px !important;
+                                color: $default-text-color;
+                                font-weight: 400;
+                                padding: 12px 10px 10px 20px;
+                                border-bottom: 2px solid $light-white !important;
+                                font-family: 'Inter-Regular', sans-serif;
+
+                                button {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px solid $light-grey;
+                                    border-radius: 4px;
+                                    height: 32px;
+                                    width: 32px;
+
+                                    &.btn-delete {
+                                        &.has-inventory-count {
+                                            opacity: 0.4;
+                                            cursor: auto;
+                                        }
+                                    }
+                                }
+
+                                .inventory-wrapper {
+                                    display: flex;
+                                    justify-content: flex-start;
+                                    align-items: center;
+
+                                    .inventory-img {
+                                        margin-right: 8px;
+                                    }
+                                }
+
+                                .info-wrapper {
+                                    .inventory-info {
+                                        color: $default-text-color;
+                                        margin-bottom: 0;
+                                        font-size: 14px !important;
+                                        white-space: nowrap;
+                                        max-width: 230px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+
+                                    .inventory-category {
+                                        color: $dark-grey;
+                                        margin-bottom: 0;
+                                        text-align: start;
+                                        font-size: 12px !important;
+                                    }
+                                }
+
+                                .actions {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                /* Scrollbar */
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1; 
+                }
+                
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: #d3d3d3; 
+                }
+                
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: #d3d3d3; 
+                }
+            }
+
+            &.no-data-table {
+                .inventory-search-wrapper {
+                    display: none;
+                }
+
+                .v-data-table__wrapper {
+                    max-height: unset;
+
+                    table {
+                        thead {
+                            display: none;
+                        }
+
+                        tbody {
+                            tr {
+                                &:hover {
+                                    background: $white !important;
+                                }
+                                
+                                td {
+                                    border-bottom: none !important;
+
+                                    .no-data-preloader,
+                                    .no-data-wrapper {
+                                        min-height: 300px;
+                                        padding: 30px;
+                                    }
+
+                                    .no-data-wrapper {
+                                        p {
+                                            font-size: 14px !important;
+                                        }
+
+                                        img {
+                                            margin-bottom: 10px;
+                                        }
+
+                                        h3 {
+                                            font-size: 20px;
+                                            margin-bottom: 10px;
+                                        }                                        
+                                    }
+
+                                    .btn-blue {
+                                        min-width: 130px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1360px) {
+    
+}
+
+@media screen and (min-width: 1361px) and (max-width: 1440px) {
+    
+}
+
+/* TABLET */
+@media screen and (min-width: 1201px) and (max-width: 1264px) {
+    .warehouse-table-wrapper {
+        .v-data-table {
+            &.inventory-table {
+                .v-data-table__wrapper {
+                    tbody {
+                        tr {
+                            td {
+                                .info-wrapper {
+                                    .inventory-info {
+                                        max-width: 150px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

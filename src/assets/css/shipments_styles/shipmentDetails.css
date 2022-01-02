@@ -1,0 +1,425 @@
+.v-breadcrumbs.theme--light .v-breadcrumbs__item {
+    color: #0171A1;
+    font-family: 'Inter-SemiBold', sans-serif;
+    font-size: 16px;
+}
+.v-breadcrumbs__divider,
+.v-breadcrumbs__item.v-breadcrumbs__item--disabled {
+    color: #4A4A4A !important;
+}
+
+.documents-wrapper .v-tabs.customTab,
+.shipment-details-wrapper .second-col .v-tabs.customTab {
+    border: none;
+    border-bottom: 1px solid rgb(225, 236, 240);
+}
+
+.v-tab.Milestones {
+    display: none !important;
+}
+
+.shipment-details-wrapper .first-col {
+    padding: 10px 20px;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.shipment-details-wrapper .first-col .details-breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.shipment-details-wrapper .first-col .shipment-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #4A4A4A !important;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+.shipment-details-wrapper .first-col .right-chevron {
+    padding: 3px 10px 0;
+}
+
+.shipment-details-wrapper .first-col .shipment-ref {
+    font-size: 14px;
+    color: #6D858F !important;
+    margin-bottom: 0 !important;
+}
+
+.shipment-details-wrapper .second-col {
+    padding: 30px 20px 10px 0;
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+.shipment-details-wrapper .second-col .v-sheet.v-card {
+    /* height: 100%; */
+    border-radius: 4px !important;
+    border: 1px solid #E1ECF0;
+}
+
+.v-breadcrumbs {
+    padding: 20px 0 !important;
+    font-weight: 700;
+}
+
+.v-breadcrumbs__divider {
+    color: #4A4A4A !important;
+}
+
+.customCard {
+    border: 1px solid #e1ecf0;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    height: 28px;
+    padding: 2px 10px;
+    color: white;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.btn-gray:focus,
+.btn-white:focus,
+.btn-blue:focus {
+    outline: 0;
+    cursor: unset !important;
+}
+
+#top-header .btn-blue {
+    background: #0171a1;
+    cursor: unset;
+}
+
+.btn-gray {
+    background: #e1ecf0;
+    color: #6D858F;
+}
+
+.btn-white {
+    background: #fff;
+    color: #6D858F;
+    margin-right: 5px;
+}
+
+.btn-status-white {
+    background-color: #fff;
+    color: #0171A1;
+    /* margin-right: 5px; */
+    border-radius: 99px;
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 1px solid #E1ECF0;
+    height: auto;
+}
+
+#top-header {
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+#top-header .reference-status,
+#top-header .place-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-header .place-wrapper .place-content {
+    display: flex;
+}
+
+#top-header div h2 {
+    color: #4A4A4A !important;
+    font-family: 'Inter-Medium', sans-serif;
+}
+.milestone-name {
+    color: #4A4A4A !important;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+/* p {
+    margin-bottom: unset !important;
+    font-size: 12px;
+} */
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #4a4a4a;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0px !important;
+    font-family: 'Inter-Medium', sans-serif;
+}
+
+.heading span {
+    color: #4A4A4A !important;
+    font-family: 'Inter-Medium', sans-serif !important;
+}
+
+.heading span.info-title {
+    color: #6D858F !important;
+    margin-right: 5px;
+    font-family: 'Inter-SemiBold', sans-serif !important;
+}
+
+.heading img {
+    /* margin-right: 8px */
+    margin: 0 8px 0 5px;
+}
+
+.update-details {
+    display: flex;
+    align-items: center;
+    color:#F99E18;
+}
+
+.update-details img {
+    margin-right: 5px;
+}
+
+.v-tab {
+    text-transform: none !important;
+    font-family: 'Inter-Regular', sans-serif !important;
+    letter-spacing: 0 !important;
+    font-weight: 600 !important;
+    padding: 16px 25px !important;
+    color: #4A4A4A !important;
+    font-size: 16px !important;
+}
+
+.v-tab--active {
+    color: #0171A1 !important;
+}
+
+.po-container {
+    /* display: block !important; */
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+}
+
+.po-container span {
+    font-family: 'Inter-Regular', sans-serif !important;
+}
+
+#top-header button.btn-white {
+    padding: 5px 10px;
+    font-size: 11px;
+    margin-top: 5px;
+    height: unset;
+    text-align: left;
+    cursor: unset;
+}
+    
+.router-link-exact-active {
+    background-color: #015D85;
+    border-left: 6px solid #039ddc;
+    color: #fff;
+}
+
+.preloader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 45px;
+}
+
+@media screen and (max-width: 768px) {
+    .shipment-details-wrapper .first-col .details-breadcrumbs {
+        padding: 15px 15px 20px;
+    }
+
+    .v-tab {
+        padding: 12px !important;
+        font-size: 13px !important;
+    }
+
+    .v-tab:before,
+    .v-tab:focus,
+    .v-tab:hover {
+        background-color: transparent !important;
+    }
+
+    .documents-wrapper .v-tabs.customTab {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .documents-wrapper .v-tabs.customTab .v-tab {
+        font-family: 'Inter-Regular', sans-serif !important;
+        color: #4A4A4A !important;
+        font-size: 14px !important;
+        letter-spacing: 0 !important;
+        text-transform: capitalize;
+        padding: 0 18px !important;
+    }
+
+    .v-breadcrumbs.theme--light .v-breadcrumbs__item {
+        font-size: 14px;
+    }
+
+    #top-header div h2 {
+        font-size: 18px !important;
+    }
+
+    .reference-status button {
+        /* min-width: 130px !important; */
+        font-size: 11px !important;
+    }
+
+    .po-container {
+        display: block !important;
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .shipment-details-wrapper .first-col .details-breadcrumbs {
+        padding: 15px 15px 20px;
+    }
+
+    .shipment-details-wrapper .first-col,
+    .shipment-details-wrapper .second-col {
+        padding: 0 !important;
+    }
+
+    .shipment-details-wrapper .second-col .v-sheet.v-card {
+        border: none;
+        padding: 0 !important;
+    }
+
+    .shipment-details-wrapper .second-col .v-sheet.v-card > div:first-child {
+        padding: 0 !important;
+    }
+
+    .shipment-details-wrapper .second-col .milestone-name {
+        display: none;
+    }
+
+    .milestone-tab .v-slide-group__content.v-tabs-bar__content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top-header {
+        padding: 0 16px !important;
+    }
+
+    #top-header div h2 {
+        font-size: 20px;
+    }
+
+    .shipment-details-wrapper .first-col .v-breadcrumbs {
+        padding: 20px 16px 16px !important;
+    }
+
+    /* #top-header button.btn-white:first-child {
+        margin-top: 0;
+    } */
+
+    #top-header button.btn-white {
+        padding: 5px 10px;
+        font-size: 11px;
+        margin-top: 5px;
+        /* margin: 0 5px 0 0; */
+        height: unset;
+        text-align: left;
+    }
+
+    .reference-status {
+        display: block !important;
+        flex-direction: column;
+    }
+
+    .reference-status button {
+        height: 34px;
+        font-size: 12px;
+        /* min-width: 100px; */
+        margin-top: 6px;
+    }
+
+    .place-wrapper {
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
+        flex-direction: column;
+        margin-top: 15px;
+        height: unset !important;
+        /* margin-bottom: 10px; */
+    }
+
+    .place-wrapper .place-content {
+        justify-content: flex-start !important;
+        flex-direction: column;
+    }    
+
+    .place-wrapper .place-content p {
+        font-size: 12px;
+        margin-bottom: 10px !important;
+    }  
+
+    .mobile-status {
+        justify-content: flex-start !important;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .mobile-status .update-details {
+        margin-top: 0 !important;
+        margin-left: 20px;
+    }
+
+    .mobile-status p {
+        font-size: 12px;
+    }
+
+    .v-tab.Milestones {
+        display: flex !important;
+    }
+
+    .milestone-tab .v-tabs-bar {
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F1F6FA !important;
+        height: 70px !important;
+        padding: 0 25px !important;
+        width: 100%; */
+        display: none;
+    }
+
+    .v-tabs.customTab.milestone-tab .v-tab {
+        width: 100%;
+        background-color: #E1ECF0;
+        border-radius: 4px;
+        padding: 12px 35px !important;
+    }
+
+    .v-tabs.customTab.milestone-tab .v-tab.v-tab--active {
+        background: #fff;
+        border: 1px solid #0171A1;
+        padding: 12px !important;
+    }
+
+    .milestone-tab .v-tabs-slider-wrapper {
+        display: none;
+    }
+
+    .milestone-containers {
+        padding: 16px;
+    }    
+    
+    .v-slide-group__prev.v-slide-group__prev--disabled {
+        display: none !important;
+    }
+}
